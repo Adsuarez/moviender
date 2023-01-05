@@ -1,0 +1,18 @@
+.header {
+    background: rgb(9, 12, 22);
+    color: white;
+    padding: 0.2rem;
+    margin: auto;
+}
+
+.navigation {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.navigation a:hover {
+    color: rgb(110, 110, 112);
+    text-decoration: underline;
+}
+
