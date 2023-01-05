@@ -1,7 +1,3 @@
-.hidden {
-  visibility: hidden;
-}
-
-.visible {
-  visibility: visible;
+.buttons {
+  padding: 8px;
 }

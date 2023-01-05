@@ -1,5 +1,5 @@
 {
-  "name": "my-moviender",
+  "name": "moviender",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,8 +12,8 @@
     "@next/font": "13.1.1",
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
-    "next": "13.1.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "next": "^13.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
