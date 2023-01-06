@@ -4,14 +4,16 @@ const API = "https://api.themoviedb.org/3/movie/";
 const fetching = () => {
   return fetch(`${API}550?api_key=${API_KEY}`, {
     next: { revalidate: 60 },
-  }).then((response) => response.json());
+  })
+    .then((response) => response.json())
+    .catch((error) => console.error(error));
 };
 
 export async function FetchMovies() {
-  const movies = await fetching();
+  const movies = new Promise(fetching());
   const { title } = movies;
   console.log(movies.title);
-  
+
   return title;
 }
 
