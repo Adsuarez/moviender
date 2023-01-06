@@ -1,6 +1,7 @@
 .profile {
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: flex-end;
     padding: 0.2rem;
+    background: rgb(112, 109, 165);
 }
