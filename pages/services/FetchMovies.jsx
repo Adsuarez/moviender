@@ -9,12 +9,15 @@ const fetching = () => {
     .catch((error) => console.error(error));
 };
 
-export async function FetchMovies() {
-  const movies = new Promise(fetching());
-  const { title } = movies;
-  console.log(movies.title);
+export default function FetchMovies() {
+  const movies = Promise.resolve(fetching()).then((values) => {
+    console.log(values)
+    return (<div>values</div>);//---> No pasa nada con esto
+  });
+  //const { title } = movies;
+  //console.log(movies.title);
 
-  return title;
+  //return movies; //--> SI RETORNO ESTO CAGO TODO
 }
 
 /*

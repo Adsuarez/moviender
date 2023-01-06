@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import Navigation from "./components/Navigation";
 import LoginInfo from "./components/LoginInfo";
 import { UserContextProvider } from "./context/UserContext";
+import { FetchMovies } from "./services/FetchMovies.jsx";
 
 export default function App({ Component, pageProps }) {
   return (

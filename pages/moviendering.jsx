@@ -1,25 +1,13 @@
-import { FetchMovies } from "./services/FetchMovies.jsx";
+import FetchMovies from "./services/FetchMovies.jsx";
 import { useEffect } from "react";
 
 export default function MovienderingPage() {
-  /*
-  const movies = {
-    then(OnResolve, OnReject) {
-      OnResolve({
-        then(onResolve, onReject) {
-          onResolve(FetchMovies());
-        },
-      });
-    },
-  };
+  /*const movies = Promise.resolve(FetchMovies()).then((values) => {
+    console.log(values);
+  });*/
 
-  console.log(Promise.resolve(movies));
-
-  */
-
-  //const movies = FetchMovies;
-  //console.log(movies);
-
+  //console.log(movies); // -> aqui es una promesa
+  //FetchMovies();
   return (
     <div>
       <h1>Lets Moviendering</h1>

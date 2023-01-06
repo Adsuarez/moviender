@@ -20,6 +20,7 @@ const links = [
   },
 ];
 
+
 export default function Navigation() {
   return (
     <header className={styles.header}>
