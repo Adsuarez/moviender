@@ -1,31 +1,39 @@
+import { useState, useEffect } from "react";
+import Image from "next/image";
+
 const API_KEY = "3d74f79a7a72cdfde4ba40b495bdde84";
-const API = "https://api.themoviedb.org/3/movie/";
+const API = "https://api.themoviedb.org/3/movie/popular";
+const LANGUAGE = "es-CO";
+const IMG_SRC = "https://image.tmdb.org/t/p/original";
+const INITIAL_PAGE = 1;
 
-const fetching = () => {
-  return fetch(`${API}550?api_key=${API_KEY}`, {
-    next: { revalidate: 60 },
-  })
-    .then((response) => response.json())
-    .catch((error) => console.error(error));
-};
+export function FetchMovies() {
+  const [movies, setMovies] = useState([]);
 
-export default function FetchMovies() {
-  const movies = Promise.resolve(fetching()).then((values) => {
-    console.log(values)
-    return (<div>values</div>);//---> No pasa nada con esto
-  });
-  //const { title } = movies;
-  //console.log(movies.title);
+  useEffect(() => {
+    fetch(`${API}?api_key=${API_KEY}&language=${LANGUAGE}&page=1`)
+      .then((response) => response.json())
+      .then((data) => setMovies(data.results))
+      .catch((error) => console.error(error));
 
-  //return movies; //--> SI RETORNO ESTO CAGO TODO
+    console.log("en el useEffect");
+  }, []);
+
+  return (
+    <>
+      {movies.map((movie) => (
+        <div key={movie.id}>
+          <h2>{movie.title}</h2>
+          <Image
+            width={80}
+            height={100}
+            alt={movie.title}
+            src={`${IMG_SRC}${movie.poster_path}`}
+          ></Image>
+        </div>
+      ))}
+    </>
+  );
 }
 
-/*
-$.ajax({
-  url: 'https://randomuser.me/api/',
-  dataType: 'json',
-  success: function(data) {
-    console.log(data);
-  }
-});
-*/
+// <Image src={movie.poster_path} alt={movie.title} />
