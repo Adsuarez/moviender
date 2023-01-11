@@ -1,6 +1,15 @@
+import { useContext } from "react";
+import { UserContext } from "../context/UserContext";
+import { useRouter } from "next/router";
+
 export function ActionButtons() {
+  const { user } = useContext(UserContext);
+  const router = useRouter();
+
   const handleClick = (event) => {
-    console.log("button active")
+    if (!user) return router.push("/login");
+
+    console.log(`user: ${user.name}`);
   };
 
   return (
@@ -9,7 +18,7 @@ export function ActionButtons() {
         Like ❤️
       </button>
       <button name="desireButton" onClick={handleClick}>
-        Desire 👀📽️ 
+        Desire 👀📽️
       </button>
       <button name="dislikeButton" onClick={handleClick}>
         Dislike ❌
