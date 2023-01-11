@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { ActionButtons } from "../components/ActionButtons";
 
 const API_KEY = "3d74f79a7a72cdfde4ba40b495bdde84";
 const API = "https://api.themoviedb.org/3/movie/popular";
@@ -30,10 +31,9 @@ export function FetchMovies() {
             alt={movie.title}
             src={`${IMG_SRC}${movie.poster_path}`}
           ></Image>
+          <ActionButtons />
         </div>
       ))}
     </>
   );
 }
-
-// <Image src={movie.poster_path} alt={movie.title} />

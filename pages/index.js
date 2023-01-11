@@ -1,12 +1,15 @@
+import { useContext } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
-import {FetchMovies} from "./services/FetchMovies.jsx";
+import { FetchMovies } from "./services/FetchMovies.jsx";
+import { UserContext } from "./context/UserContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const { user } = useContext(UserContext);
 
   return (
     <>
@@ -19,7 +22,9 @@ export default function Home() {
       <div>
         <h1>Welcome to Movienderingverse</h1>
       </div>
-      <FetchMovies />
+      <div>
+        <FetchMovies />
+      </div>
     </>
   );
 }
