@@ -1,24 +1,16 @@
-import { useState } from "react";
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 import { useRouter } from "next/router";
+import { FeelControl } from "./FeelControl";
 
 export function ActionButtons({ movie }) {
   const { user, setMyMovies, myMovies } = useContext(UserContext);
   const router = useRouter();
-  const likeButton = "likeButton";
-  const desireButton = "desireButton";
-  const dislikeButton = "dislikeButton";
-  const feel = {
-    [likeButton]: "like",
-    [desireButton]: "desire",
-    [dislikeButton]: "dislike",
-  };
 
   const handleClick = (event) => {
-    if (!user) return router.push("/login");  
+    if (!user) return router.push("/login");
 
-    movie.feeling = feel[event.target.name];
+    movie.feeling = FeelControl(event.target.name);
 
     if (myMovies.length === 0) return setMyMovies([movie]);
 
