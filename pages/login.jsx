@@ -10,7 +10,7 @@ export default function LoginPage() {
     //conect to BD to get the user
     return setUser({
       id: "1001000",
-      name: "Andres",
+      name: "Miler",
       email: "usuario@usuario.com",
       instagram: "https://www.instagram.com/usuario_usuario/",
     });

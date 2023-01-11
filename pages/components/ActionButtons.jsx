@@ -1,15 +1,33 @@
+import { useState } from "react";
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 import { useRouter } from "next/router";
 
-export function ActionButtons() {
-  const { user } = useContext(UserContext);
+export function ActionButtons({ movie }) {
+  const { user, setMyMovies, myMovies } = useContext(UserContext);
   const router = useRouter();
+  const likeButton = "likeButton";
+  const desireButton = "desireButton";
+  const dislikeButton = "dislikeButton";
+  const feel = {
+    [likeButton]: "like",
+    [desireButton]: "desire",
+    [dislikeButton]: "dislike",
+  };
 
   const handleClick = (event) => {
-    if (!user) return router.push("/login");
+    if (!user) return router.push("/login");  
 
-    console.log(`user: ${user.name}`);
+    movie.feeling = feel[event.target.name];
+
+    if (myMovies.length === 0) return setMyMovies([movie]);
+
+    const evaluateRepetId = myMovies.map(
+      (myMovie) => myMovie.id !== movie.id || false
+    );
+
+    if (evaluateRepetId.every((item) => item === true))
+      return setMyMovies([...myMovies, movie]);
   };
 
   return (
