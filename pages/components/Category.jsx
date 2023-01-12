@@ -20,7 +20,6 @@ function CategoryOrganizer(myMovies, feel) {
 
 export function Category({ title = "movies you like" }) {
   const { myMovies, setMyMovies } = useContext(UserContext);
-  console.log(myMovies);
   return (
     <div>
       {CategoryOrganizer(myMovies, "like")}

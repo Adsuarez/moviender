@@ -7,6 +7,10 @@ const links = [
     route: "/",
   },
   {
+    label: "My movies",
+    route: "mymovies",
+  },
+  {
     label: "Moviendering",
     route: "/moviendering",
   },
@@ -24,8 +28,8 @@ const links = [
 export default function Navigation() {
   return (
     <header className={styles.header}>
-      <nav>
-        <ul className={styles.navigation}>
+      <nav className={styles.navigation}>
+        <ul>
           {links.map(({ label, route }) => (
             <li key={route}>
               <Link href={route}>{label}</Link>

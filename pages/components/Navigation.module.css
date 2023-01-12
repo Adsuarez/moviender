@@ -1,18 +1,21 @@
 .header {
     background: rgb(9, 12, 22);
-    color: white;
     padding: 0.2rem;
-    margin: auto;
+    margin: auto;    
 }
 
-.navigation {
+.navigation ul {
     display: flex;
     list-style: none;
     gap: 32px;
 }
 
+.navigation a {
+    color: rgb(53, 190, 142);
+    text-decoration: none;
+}
+
 .navigation a:hover {
-    color: rgb(110, 110, 112);
-    text-decoration: underline;
+    color: rgb(83, 33, 131);
 }
 
