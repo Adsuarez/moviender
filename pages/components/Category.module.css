@@ -1,0 +1,10 @@
+.section {
+    background: rgb(88, 83, 102);
+}
+
+.section h3{
+    background: rgb(16, 11, 51);
+    color: rgb(25, 201, 104);
+    text-align: center;
+    padding: 0.4rem;
+}
