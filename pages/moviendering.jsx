@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { UserContext } from "./context/UserContext";
 import PosterImage from "./components/PosterImage";
+import Schedule from "./components/Schedule";
 
 export default function MovienderingPage() {
   const { schedule } = useContext(UserContext);
@@ -12,6 +13,7 @@ export default function MovienderingPage() {
         <div key={movie.id}>
           <h3>{movie.title}</h3>
           <PosterImage path={movie.poster_path} title={movie.title} />
+          <Schedule />
         </div>
       ))}
     </div>
