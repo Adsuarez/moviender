@@ -2,9 +2,10 @@ import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 import PosterImage from "../components/PosterImage";
 import styles from "./Category.module.css";
-import ScheduleAppointment from "./ScheduleAppointment";
+import CalendarButton from "./CalendarButton";
 
 function CategoryOrganizer(myMovies, feel) {
+
   return (
     <section className={styles.section}>
       <h3>Movies i {feel}</h3>
@@ -14,7 +15,7 @@ function CategoryOrganizer(myMovies, feel) {
           <div key={myMovie.id}>
             <PosterImage path={myMovie.poster_path} title={myMovie.title} />
             <p>{myMovie.title}</p>
-            {feel === "desire" && <ScheduleAppointment myMovie={myMovie}/>}
+            <CalendarButton />
           </div>
         ))}
     </section>
@@ -23,6 +24,7 @@ function CategoryOrganizer(myMovies, feel) {
 
 export function Category({ title = "movies you like" }) {
   const { myMovies, setMyMovies } = useContext(UserContext);
+
   return (
     <div>
       {CategoryOrganizer(myMovies, "desire")}

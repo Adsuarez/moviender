@@ -1,20 +1,21 @@
 import { useContext } from "react";
 import { UserContext } from "./context/UserContext";
 import PosterImage from "./components/PosterImage";
-import Schedule from "./components/Schedule";
 
 export default function MovienderingPage() {
   const { schedule } = useContext(UserContext);
+  console.log(schedule);
   return (
     <div>
       <h1>Lets Moviendering</h1>
       <h2>Schedule movies appointment</h2>
-      {schedule.map((movie) => (
-        <div key={movie.id}>
-          <h3>{movie.title}</h3>
-          <PosterImage path={movie.poster_path} title={movie.title} />
-          <Schedule />
-        </div>
+      {schedule.map(date => (
+        <section key={date}>
+          <h3>Titulo</h3>
+          <p>{date.getUTCDate()}</p>
+          <p>{date.getUTCMonth()+1}</p>
+          <p>{date.getUTCFullYear()}</p>
+        </section>
       ))}
     </div>
   );
