@@ -3,13 +3,13 @@ import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import ScheduleAppointment from "./ScheduleAppointment";
 
-export default function Schedule() {
+export default function Schedule({myMovie}) {
   const [value, onChange] = useState(new Date());
   
   return (
     <div>
       <Calendar onChange={onChange} value={value} />
-      <ScheduleAppointment date={value}/>
+      <ScheduleAppointment date={value} myMovie={myMovie}/>
     </div>
   );
 }

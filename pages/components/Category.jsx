@@ -15,7 +15,7 @@ function CategoryOrganizer(myMovies, feel) {
           <div key={myMovie.id}>
             <PosterImage path={myMovie.poster_path} title={myMovie.title} />
             <p>{myMovie.title}</p>
-            <CalendarButton />
+            <CalendarButton myMovie={myMovie}/>
           </div>
         ))}
     </section>

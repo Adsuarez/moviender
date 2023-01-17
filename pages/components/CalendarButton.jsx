@@ -1,9 +1,8 @@
 import { useState } from "react";
 import Schedule from "./Schedule";
 
-function CalendarButton() {
+function CalendarButton({myMovie}) {
   const [active, setActive] = useState(true);
-
   const visibleCLick = () => {
     setActive(!active);
   };
@@ -13,7 +12,7 @@ function CalendarButton() {
       {!active ? (
         <div>
           <button onClick={visibleCLick}>Hide ❌</button>
-          <Schedule />
+          <Schedule myMovie={myMovie}/>
         </div>
       ) : (
         <button onClick={visibleCLick}>Show 🗓️</button>
