@@ -1,5 +1,8 @@
 .navigation {
   display: flex;
+  flex-direction: row;
+  gap: 16px;
+  
 }
 
 .navigation ul {
@@ -12,6 +15,7 @@
 .navigation a {
   color: rgb(53, 190, 142);
   text-decoration: none;
+  align-items: center;
 }
 
 .navigation a:hover {

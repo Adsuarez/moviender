@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <UserContextProvider>
-        <nav className="nav">
+        <nav className="nav-bar">
           <Navigation />
         </nav>
         <Component {...pageProps} />
