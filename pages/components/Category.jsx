@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 import PosterImage from "../components/PosterImage";
-import styles from "./Category.module.css";
+import styles from "../../styles/Category.module.css";
 import CalendarButton from "./CalendarButton";
 
 function CategoryOrganizer(myMovies, feel) {

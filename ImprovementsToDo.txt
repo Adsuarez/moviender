@@ -1,9 +1,15 @@
-- Link in Pending to login ("infoLogin")
-- Optimize the "myMovie" info that is travel around Category-CalendarBUtton-Schedule-ScheduleAppointment my be with a temporal data in context
-- Pagination in movies, we only have de first page in the fetchMOvies.
-- Fix the head.
-- organize all of the CSS.
-- separate components and hooks (create customHooks).
-- create a big calendar o some way to see schedule in Movindering.
-- Create the real SignIn
-- Create the real SignIn
+- ✅Link in Pending to login ("infoLogin")
+- ❌Optimize the "myMovie" info that is travel around Category-CalendarBUtton-Schedule-ScheduleAppointment my be with a temporal data in context
+- ❌Pagination in movies, we only have de first page in the fetchMOvies.
+- ❌Fix the head.
+- ❌organize all of the CSS.
+- ✅separate components and hooks (create customHooks).
+- ❌create a big calendar o some way to see schedule in Movindering.
+- ❌Create the real SignIn
+- ❌Create the real SignIn
+- ❌Create language options
+- ✅redirect before login
+- ❌Calendar options only in desire and like movies.
+- ✅Separate styles from components to styles folder
+- ❌Use Id in scheduled dates
+- ❌Create profile info or setting and logout wehn clicking on avatar or user name

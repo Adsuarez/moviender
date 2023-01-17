@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 import { useRouter } from "next/router";
-import { FeelControl } from "./FeelControl";
 
 export function ActionButtons({ movie }) {
   const { user, setMyMovies, myMovies } = useContext(UserContext);
@@ -10,7 +9,7 @@ export function ActionButtons({ movie }) {
   const handleClick = (event) => {
     if (!user) return router.push("/login");
 
-    movie.feeling = FeelControl(event.target.name);
+    movie.feeling = event.target.name;
 
     if (myMovies.length === 0) return setMyMovies([movie]);
 
@@ -24,13 +23,13 @@ export function ActionButtons({ movie }) {
 
   return (
     <>
-      <button name="likeButton" onClick={handleClick}>
+      <button name="like" onClick={handleClick}>
         Like ❤️
       </button>
-      <button name="desireButton" onClick={handleClick}>
+      <button name="desire" onClick={handleClick}>
         Desire 👀📽️
       </button>
-      <button name="dislikeButton" onClick={handleClick}>
+      <button name="dislike" onClick={handleClick}>
         Dislike ❌
       </button>
     </>
