@@ -1,21 +1,19 @@
-.header {
-    background: rgb(9, 12, 22);
-    padding: 0.2rem;
-    margin: auto;    
+.navigation {
+  display: flex;
 }
 
 .navigation ul {
-    display: flex;
-    list-style: none;
-    gap: 32px;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 0 16px;
 }
 
 .navigation a {
-    color: rgb(53, 190, 142);
-    text-decoration: none;
+  color: rgb(53, 190, 142);
+  text-decoration: none;
 }
 
 .navigation a:hover {
-    color: rgb(83, 33, 131);
+  color: rgb(83, 33, 131);
 }
-

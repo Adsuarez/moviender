@@ -9,7 +9,7 @@
 - ❌Create the real SignIn
 - ❌Create language options
 - ✅redirect before login
-- ❌Calendar options only in desire and like movies.
+- ❓Calendar options only in desire and like movies.
 - ✅Separate styles from components to styles folder
 - ❌Use Id in scheduled dates
 - ❌Create profile info or setting and logout wehn clicking on avatar or user name

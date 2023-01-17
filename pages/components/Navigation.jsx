@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "../../styles/Navigation.module.css";
+import LoginInfo from "./LoginInfo";
 
 const links = [
   {
@@ -24,11 +25,9 @@ const links = [
   },
 ];
 
-
 export default function Navigation() {
   return (
-    <header className={styles.header}>
-      <nav className={styles.navigation}>
+      <div className={styles.navigation}>
         <ul>
           {links.map(({ label, route }) => (
             <li key={route}>
@@ -36,7 +35,7 @@ export default function Navigation() {
             </li>
           ))}
         </ul>
-      </nav>
-    </header>
+        <LoginInfo />
+      </div>
   );
 }
