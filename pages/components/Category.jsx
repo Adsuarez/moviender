@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 import PosterImage from "../components/PosterImage";
-import styles from "../../styles/Category.module.css";
+import styles from "../../styles/MyMovies.module.css";
 import CalendarButton from "./CalendarButton";
 
 function CategoryOrganizer(myMovies, feel) {
@@ -12,10 +12,12 @@ function CategoryOrganizer(myMovies, feel) {
         {myMovies
           .filter((item) => item.feeling === feel)
           .map((myMovie) => (
-            <div key={myMovie.id}>
-              <PosterImage path={myMovie.poster_path} title={myMovie.title} />
-              <p>{myMovie.title}</p>
-              <CalendarButton myMovie={myMovie} />
+            <div key={myMovie.id} className="singleMovie">
+              <section className={styles.sectionMovie}>
+                <p>{myMovie.title}</p>
+                <CalendarButton myMovie={myMovie} />
+                <PosterImage path={myMovie.poster_path} title={myMovie.title} />
+              </section>
             </div>
           ))}
       </section>

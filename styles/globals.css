@@ -24,7 +24,7 @@ p {
 
 .nav-bar {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   background: rgb(9, 12, 22);
 }
 
@@ -41,13 +41,13 @@ p {
   border-radius: 5px;
 }
 
-.singleMovie:hover{
+.singleMovie:hover {
   background: rgba(74, 74, 168, 0.2);
 }
 
 .movieImgButtons {
   display: flex;
-  justify-content: center;
-  gap: 32px;
+  gap: 4px;
+  justify-content: space-around;
   align-items: center;
 }

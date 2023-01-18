@@ -23,7 +23,7 @@ export function ActionButtons({ movie }) {
   };
 
   return (
-    <section className={styles.singleMovie}>
+    <section className={styles.actionButtons}>
       <button name="like" onClick={handleClick}>
         Like ❤️
       </button>
