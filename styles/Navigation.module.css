@@ -2,20 +2,20 @@
   display: flex;
   flex-direction: row;
   gap: 16px;
-  
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navigation ul {
   display: flex;
   list-style: none;
-  align-items: center;
-  gap: 0 16px;
+  gap: 16px;
+  justify-content: center;
 }
 
 .navigation a {
   color: rgb(53, 190, 142);
   text-decoration: none;
-  align-items: center;
 }
 
 .navigation a:hover {

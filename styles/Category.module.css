@@ -1,9 +1,8 @@
 .section {
-    background: rgb(88, 83, 102);
+  /* background: rgb(88, 83, 102); */
 }
 
-.section h3{
-    background: rgb(16, 11, 51);
-    color: rgb(25, 201, 104);
-    text-align: center;
+.section h3 {
+  background: rgb(178, 173, 216);
+  color: rgb(25, 201, 104);
 }

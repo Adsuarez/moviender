@@ -20,10 +20,12 @@ export function FetchMovies() {
   return (
     <>
       {movies.map((movie) => (
-        <div key={movie.id}>
+        <div key={movie.id} className="singleMovie">
           <p>{movie.title}</p>
-          <PosterImage path={movie.poster_path} title={movie.title} />
-          <ActionButtons movie={movie} />
+          <section className="movieImgButtons">
+            <PosterImage path={movie.poster_path} title={movie.title} />
+            <ActionButtons movie={movie} />
+          </section>
         </div>
       ))}
     </>

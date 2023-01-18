@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 import { useRouter } from "next/router";
+import styles from '../../styles/Home.module.css'
 
 export function ActionButtons({ movie }) {
   const { user, setMyMovies, myMovies } = useContext(UserContext);
@@ -22,7 +23,7 @@ export function ActionButtons({ movie }) {
   };
 
   return (
-    <>
+    <section className={styles.singleMovie}>
       <button name="like" onClick={handleClick}>
         Like ❤️
       </button>
@@ -32,6 +33,6 @@ export function ActionButtons({ movie }) {
       <button name="dislike" onClick={handleClick}>
         Dislike ❌
       </button>
-    </>
+    </section>
   );
 }
