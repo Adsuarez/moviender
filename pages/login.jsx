@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { UserContext } from "./context/UserContext";
-import styles from "../styles/Login.module.css";
+import ComponentStyles from "../styles/Buttons.module.css";
 import { useRouter } from "next/router";
+import styles from '../styles/Login.module.css'
 
 export default function LoginPage() {
   const { user, setUser } = useContext(UserContext);
@@ -29,9 +30,9 @@ export default function LoginPage() {
   };
 
   return (
-    <div>
+    <div className={styles.div}>
       <h1>Login in Moviender</h1>
-      <form className={styles.buttons}>
+      <form className={ComponentStyles.actionButtons}>
         {!user ? (
           <button onClick={login}>Login</button>
         ) : (

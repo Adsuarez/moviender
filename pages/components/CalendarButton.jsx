@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Schedule from "./Schedule";
+import styles from '../../styles/Buttons.module.css'
 
 function CalendarButton({myMovie}) {
   const [active, setActive] = useState(true);
@@ -8,7 +9,7 @@ function CalendarButton({myMovie}) {
   };
 
   return (
-    <>
+    <section className={styles.actionButtons}>
       {!active ? (
         <div>
           <button onClick={visibleCLick}>Hide ❌</button>
@@ -17,7 +18,7 @@ function CalendarButton({myMovie}) {
       ) : (
         <button onClick={visibleCLick}>Show 🗓️</button>
       )}
-    </>
+    </section>
   );
 }
 

@@ -1,0 +1,18 @@
+.actionButtons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.actionButtons button {
+    background: rgb(208, 203, 235);
+    border-radius: 1em;
+    border-style: none;
+    padding: 0.3em;
+    text-align: center;
+}
+
+.actionButtons button:hover {
+    background: rgb(83, 228, 114);
+    cursor: pointer;
+}

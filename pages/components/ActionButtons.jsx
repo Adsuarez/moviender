@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 import { useRouter } from "next/router";
-import styles from '../../styles/Home.module.css'
+import styles from '../../styles/Buttons.module.css'
 
 export function ActionButtons({ movie }) {
   const { user, setMyMovies, myMovies } = useContext(UserContext);
