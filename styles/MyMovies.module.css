@@ -1,16 +1,10 @@
-.section {
-  background: rgb(196, 230, 8);
-}
-
-.section h3 {
-  background: rgb(178, 173, 216);
-  color: rgb(25, 201, 104);
-}
-
 .sectionMovie {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 4px;
+  gap: 16px;
+}
+
+.sectionMovie PosterImage{
+  position: absolute;
 }

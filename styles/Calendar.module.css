@@ -1,0 +1,7 @@
+.calendar {
+  border-radius: 0%;
+  background-color: rgba(49, 116, 43, 0.5);
+  border-style: hidden;
+  position: relative;
+  width: auto;
+}
