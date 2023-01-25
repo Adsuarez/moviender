@@ -1,7 +1,13 @@
-.calendar {
-  border-radius: 0%;
-  background-color: rgba(49, 116, 43, 0.5);
+.div {
+  position: absolute; 
+}
+
+.myCalendar {
+  background-color: rgb(53, 190, 142);
   border-style: hidden;
-  position: relative;
-  width: auto;
+  width: min-content;
+}
+
+.myCalendar button{
+  border-radius: 0%;
 }

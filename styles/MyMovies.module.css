@@ -5,6 +5,10 @@
   gap: 16px;
 }
 
-.sectionMovie PosterImage{
-  position: absolute;
+.sectionMovie img{
+  /* position: relative; */
+}
+
+.sectionMovie button{
+  margin: 8px 0;
 }

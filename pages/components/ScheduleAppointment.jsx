@@ -15,7 +15,7 @@ export default function ScheduleAppointment({ date, myMovie }) {
 
   return (
     <>
-      <button onClick={scheduleClick}>Schedule the selected date 🎥✅</button>
+      <button onClick={scheduleClick}>Schedule the selected day 🎥✅</button>
     </>
   );
 }

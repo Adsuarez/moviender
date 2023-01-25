@@ -8,8 +8,8 @@ export default function Schedule({myMovie}) {
   const [value, onChange] = useState(new Date());
   
   return (
-    <div>
-      <Calendar onChange={onChange} value={value} className={styles.calendar}/>
+    <div className={styles.div}>
+      <Calendar onChange={onChange} value={value} className={styles.myCalendar}/>
       <ScheduleAppointment date={value} myMovie={myMovie}/>
     </div>
   );
