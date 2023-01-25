@@ -1,11 +1,17 @@
 .div {
   position: absolute;
+  background: rgb(83, 90, 128, 0.5);
+  width: 100vw;
+  height: 100%;  
+  right: 0;
+  bottom: 0;
+  min-width: 300px;
 }
 
 .myCalendar {
   background-color: rgb(53, 190, 142);
   border-style: hidden;
-  width: min-content;
+  transform: translate(35px);
 }
 
 .myCalendar button{

@@ -11,11 +11,17 @@ export default function Schedule({ myMovie, visible }) {
     setActive(!active);
   };
 
+  if (active) {
+    document.body.classList.add("active-calendar");
+  } else {
+    document.body.classList.remove("active-calendar");
+  }
+
   return (
     <>
       {active ? (
         <div className={styles.div}>
-          <button onClick={visibleCLick}>Ocul❌</button>
+          <button onClick={visibleCLick}>Hide❌</button>
           <Calendar
             onChange={onChange}
             value={value}

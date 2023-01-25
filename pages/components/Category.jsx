@@ -1,16 +1,10 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 import PosterImage from "../components/PosterImage";
 import styles from "../../styles/MyMovies.module.css";
-// import CalendarButton from "./CalendarButton";
-import Schedule from "./Schedule";
+import CalendarButton from "./CalendarButton";
 
 function CategoryOrganizer(myMovies, feel) {
-  const [active, setActive] = useState(true);
-  const visibleCLick = () => {
-    setActive(!active);
-  };
-  
   return (
     <>
       <h3>Movies i {feel}</h3>
@@ -21,10 +15,12 @@ function CategoryOrganizer(myMovies, feel) {
             <div key={myMovie.id} className="singleMovie">
               <section className={styles.sectionMovie}>
                 <p>{myMovie.title}</p>
-                <button onClick={visibleCLick}>Show 🗓️</button>
-                {active && <Schedule visible={true} myMovie={myMovie}/>}
-                {/* <CalendarButton myMovie={myMovie} /> */}
-                <PosterImage path={myMovie.poster_path} title={myMovie.title} className={styles.poster}/>
+                <CalendarButton myMovie={myMovie} />
+                <PosterImage
+                  path={myMovie.poster_path}
+                  title={myMovie.title}
+                  className={styles.poster}
+                />
               </section>
             </div>
           ))}

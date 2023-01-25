@@ -10,26 +10,16 @@ function CalendarButton({ myMovie }) {
 
   return (
     <section className={styles.actionButtons}>
-      {active ? 
-      <button onClick={visibleCLick}>Show 🗓️</button> 
-      : <button>cosa</button>}
-    </section>
-  );
-}
-
-export default CalendarButton;
-
-/*
-  return (
-    <section className={styles.actionButtons}>
       {!active ? (
-        <div>
-          <button onClick={visibleCLick}>Hide ❌</button>
-          <Schedule myMovie={myMovie}/>
-        </div>
+        <>
+          <button onClick={visibleCLick}>Show 🗓️</button>
+          <Schedule myMovie={myMovie} />
+        </>
       ) : (
         <button onClick={visibleCLick}>Show 🗓️</button>
       )}
     </section>
   );
-*/
+}
+
+export default CalendarButton;
