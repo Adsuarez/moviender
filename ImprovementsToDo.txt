@@ -1,18 +1,25 @@
 Icons meening:
 ✅ -> the task is full
+🟢 -> the task is done but it will better
 🟠 -> the task is in process
 ❌ -> the task is pending
+❓ -> the task may be necesary or not
 
 Tasks:
 - ✅Link in Pending to login ("infoLogin")
 - ❌Create a search page
-- ❌Optimize the "myMovie" info that is travel around Category-CalendarBUtton-Schedule-ScheduleAppointment my be with a temporal data in context
+- 🟢Optimize the "myMovie" info that is travel around Category-CalendarBUtton-Schedule-ScheduleAppointment my be with a temporal data in context
 - ❌Pagination in movies, we only have de first page in the fetchMOvies.
 - ✅Fixed the head.
-- 🟠organize all of the CSS.
+- 🟢organize CSS in Home Page.
+- 🟢organize CSS in My MOvies Page.
+- 🟠organize CSS in Scheule Page.
+- 🟠organize CSS in About Page.
+- 🟠organize CSS in Login Page.
+- 🟠organize CSS in UserInfo Page.
 - ✅separate components and hooks (create customHooks if need it).
 - ❌create a big calendar o some way to see schedule in Movindering.
-- ❌Create the real SignIn
+- ❌Create the real LogIn
 - ❌Create the real SignIn
 - ❌Create language options
 - ✅redirect before login
@@ -22,3 +29,9 @@ Tasks:
 - ❌Create profile info or setting and logout wehn clicking on avatar or user name
 - ❌Create protected routes when is not login
 - ❌Create an invitation to register when is reading the About page
+- ❌Create a dinamic head in each page
+- ❌Create options to rewrite the schedule if is selected a new date for the same movie more than one time
+- ❌Fix the style 100% or 100vh in .div class for all pages
+- ❌Add a message or animation when user click Schedule button on calendar
+- ✅Add a backdropfilter on nav-bar
+- ❌Make reasponsive and mobileOnly the app

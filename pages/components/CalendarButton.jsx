@@ -9,14 +9,18 @@ function CalendarButton({ myMovie }) {
   };
 
   return (
-    <section className={styles.actionButtons}>
+    <section>
       {!active ? (
         <>
-          <button onClick={visibleCLick}>Show 🗓️</button>
+          <div className={styles.actionButtons}>
+            <button onClick={visibleCLick}>Show 🗓️</button>
+          </div>
           <Schedule myMovie={myMovie} />
         </>
       ) : (
-        <button onClick={visibleCLick}>Show 🗓️</button>
+        <div className={styles.actionButtons}>
+          <button onClick={visibleCLick}>Show 🗓️</button>
+        </div>
       )}
     </section>
   );

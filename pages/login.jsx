@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { UserContext } from "./context/UserContext";
 import ComponentStyles from "../styles/Buttons.module.css";
 import { useRouter } from "next/router";
-import styles from '../styles/Login.module.css'
+import styles from '../styles/PageLogin.module.css'
 
 export default function LoginPage() {
   const { user, setUser } = useContext(UserContext);

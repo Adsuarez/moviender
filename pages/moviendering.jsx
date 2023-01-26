@@ -1,12 +1,13 @@
 import { useContext } from "react";
 import { UserContext } from "./context/UserContext";
 import PosterImage from "./components/PosterImage";
+import styles from '../styles/PageMoviendering.module.css'
 
 export default function MovienderingPage() {
   const { schedule } = useContext(UserContext);
 
   return (
-    <div>
+    <div className={styles.div}>
       <h1>Lets Moviendering</h1>
       <h2>Schedule movies appointment</h2>
       {schedule.map((date) => (

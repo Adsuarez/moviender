@@ -1,3 +1,5 @@
+import styles from "../../styles/Calendar.module.css";
+
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 
@@ -15,7 +17,7 @@ export default function ScheduleAppointment({ date, myMovie }) {
 
   return (
     <>
-      <button onClick={scheduleClick}>Schedule the selected day 🎥✅</button>
+      <button onClick={scheduleClick} className={styles.btn}>Schedule the selected day 🎥✅</button>
     </>
   );
 }

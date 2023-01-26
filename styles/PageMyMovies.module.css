@@ -1,3 +1,7 @@
+.div{
+  height: 100vh;
+}
+
 .sectionMovie {
   display: flex;
   flex-direction: column;

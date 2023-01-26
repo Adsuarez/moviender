@@ -1,7 +1,8 @@
+import styles from '../../styles/PageMyMovies.module.css'
+
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 import PosterImage from "../components/PosterImage";
-import styles from "../../styles/MyMovies.module.css";
 import CalendarButton from "./CalendarButton";
 
 function CategoryOrganizer(myMovies, feel) {
