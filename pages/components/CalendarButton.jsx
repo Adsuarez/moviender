@@ -5,11 +5,12 @@ import { UserContext } from "../context/UserContext";
 
 export default function CalendarButton({ myMovie }) {
   const [active, setActive] = useState(true);
-  const { schedule, setSchedule } = useContext(UserContext);
+  const { schedule, setSchedule, setShowCalendar } = useContext(UserContext);
   console.log("i need useMemo");
 
   const visibleCLick = () => {
     setActive(!active);
+    setShowCalendar(true);
   };
 
   return (

@@ -25,7 +25,7 @@ Tasks:
 - ✅redirect before login
 - ❓Calendar options only in desire and like movies.
 - ✅Separate styles from components to styles folder
-- ❌Use Id in scheduled dates
+- ❌Use Id in scheduled dates because is needed in id of the Key property in map function
 - ❌Create profile info or setting and logout wehn clicking on avatar or user name
 - ❌Create protected routes when is not login
 - ❌Create an invitation to register when is reading the About page
@@ -35,3 +35,5 @@ Tasks:
 - ❌Add a message or animation when user click Schedule button on calendar
 - ✅Add a backdropfilter on nav-bar
 - ❌Make reasponsive and mobileOnly the app
+- ❌Optimize the modal in calendar with a portal or let it be with UserContext
+- ❌Optimize the performance becouse there are re-renders in all pages
