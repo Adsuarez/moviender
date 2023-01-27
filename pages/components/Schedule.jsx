@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import ScheduleAppointment from "./ScheduleAppointment";
 import styles from "../../styles/Calendar.module.css";
 import ButtonStyles from "../../styles/Buttons.module.css";
 
-export default function Schedule({ myMovie, visible }) {
+export default function Schedule({ myMovie }) {
   const [value, onChange] = useState(new Date());
   const [active, setActive] = useState(true);
+  console.log("¿is necesary this re-render?");
+
   const visibleCLick = () => {
     setActive(!active);
   };

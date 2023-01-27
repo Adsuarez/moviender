@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useMemo, useState, useContext } from "react";
 import Schedule from "./Schedule";
 import styles from "../../styles/Buttons.module.css";
+import { UserContext } from "../context/UserContext";
 
-function CalendarButton({ myMovie }) {
+export default function CalendarButton({ myMovie }) {
   const [active, setActive] = useState(true);
+  const { schedule, setSchedule } = useContext(UserContext);
+  console.log("i need useMemo");
+
   const visibleCLick = () => {
     setActive(!active);
   };
@@ -25,5 +29,3 @@ function CalendarButton({ myMovie }) {
     </section>
   );
 }
-
-export default CalendarButton;
