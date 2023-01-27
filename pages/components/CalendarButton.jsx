@@ -1,32 +1,29 @@
-import { useMemo, useState, useContext } from "react";
+import { useContext } from "react";
 import Schedule from "./Schedule";
 import styles from "../../styles/Buttons.module.css";
 import { UserContext } from "../context/UserContext";
 
 export default function CalendarButton({ myMovie }) {
-  const [active, setActive] = useState(true);
-  const { schedule, setSchedule, setShowCalendar } = useContext(UserContext);
-  console.log("i need useMemo");
+  const { showCalendar, setShowCalendar } = useContext(UserContext);
+
+  console.log("from CalendarButton", showCalendar);
 
   const visibleCLick = () => {
-    setActive(!active);
     setShowCalendar(true);
   };
 
+  if (showCalendar) {
+    document.body.classList.add("active-calendar");
+  } else {
+    document.body.classList.remove("active-calendar");
+  }
+
   return (
-    <section>
-      {!active ? (
-        <>
-          <div className={styles.actionButtons}>
-            <button onClick={visibleCLick}>Show 🗓️</button>
-          </div>
-          <Schedule myMovie={myMovie} />
-        </>
-      ) : (
-        <div className={styles.actionButtons}>
-          <button onClick={visibleCLick}>Show 🗓️</button>
-        </div>
-      )}
-    </section>
+    <>
+      <div className={styles.actionButtons}>
+        <button onClick={visibleCLick}>Show 📆</button>
+      </div>
+      {showCalendar && <Schedule myMovie={myMovie} />}
+    </>
   );
 }

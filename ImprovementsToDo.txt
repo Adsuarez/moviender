@@ -37,3 +37,4 @@ Tasks:
 - ❌Make reasponsive and mobileOnly the app
 - ❌Optimize the modal in calendar with a portal or let it be with UserContext
 - ❌Optimize the performance becouse there are re-renders in all pages
+- ❌Solve error about calendary duplicated when change the month

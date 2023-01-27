@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import ScheduleAppointment from "./ScheduleAppointment";
@@ -8,22 +8,17 @@ import { UserContext } from "../context/UserContext";
 
 export default function Schedule({ myMovie }) {
   const [value, onChange] = useState(new Date());
-  const [active, setActive] = useState(true);
-  const { showCalendar } = useContext(UserContext);
-
+  const { showCalendar, setShowCalendar } = useContext(UserContext);
+  
+  console.log("from schedule", showCalendar)
+  
   const visibleCLick = () => {
-    setActive(!active);
+    setShowCalendar(false);
   };
-
-  if (active) {
-    document.body.classList.add("active-calendar");
-  } else {
-    document.body.classList.remove("active-calendar");
-  }
 
   return (
     <>
-      {(active && showCalendar) ? (
+      {showCalendar && (
         <div className={styles.div}>
           <div className={ButtonStyles.actionButtons}>
             <button onClick={visibleCLick} className={styles.btn}>
@@ -39,7 +34,7 @@ export default function Schedule({ myMovie }) {
             <ScheduleAppointment date={value} myMovie={myMovie} />
           </div>
         </div>
-      ) : null}
+      )}
     </>
   );
 }
