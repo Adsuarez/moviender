@@ -6,7 +6,6 @@ export function UserContextProvider(props) {
   const [user, setUser] = useState(null);
   const [myMovies, setMyMovies] = useState([]);
   const [schedule, setSchedule] = useState([]);
-  const [showCalendar, setShowCalendar] = useState(false);
   
   return (
     <UserContext.Provider
@@ -17,8 +16,6 @@ export function UserContextProvider(props) {
         setMyMovies,
         schedule,
         setSchedule,
-        showCalendar,
-        setShowCalendar,
       }}
     >
       {props.children}

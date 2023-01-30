@@ -1,27 +1,6 @@
-.div {
-  backdrop-filter: blur(4px);
-  background: rgba(39, 34, 80, 0.603);
-  bottom: 0;
-  height: 100vh;
-  min-width: 300px;
-  position: absolute;
-  right: 0;
-  width: 100vw;
-}
-
-.div button{
-  margin: 0 auto;
-}
-
 .myCalendar {
   background-color: rgb(54, 185, 141);
   border-style: hidden;
-  transform: translate(11%, 50%);
-  margin-top: 2rem;
-  margin-bottom: 1rem;
   border-radius: 8px;
-}
-
-.btn {
-  transform: translate(0%, 650%);
+  margin: 16px auto;
 }

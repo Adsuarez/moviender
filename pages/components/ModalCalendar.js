@@ -1,9 +1,9 @@
 import ReactDOM from "react-dom";
 
 import styles from "../../styles/Modal.module.css";
-import buttonStyles from '../../styles/Buttons.module.css'
+import buttonStyles from "../../styles/Buttons.module.css";
 
-function ModalAuth({ children, onClose }) {
+function ModalCalendar({ children, onClose }) {
   return (
     <div className={styles.modal}>
       <div className={styles.content}>
@@ -16,9 +16,9 @@ function ModalAuth({ children, onClose }) {
   );
 }
 
-export default function ModalAuthPortal({ children, onClose }) {
+export default function ModalCalendarPortal({ children, onClose }) {
   return ReactDOM.createPortal(
-    <ModalAuth onClose={onClose}>{children}</ModalAuth>,
-    document.getElementById("modalAuth")
+    <ModalCalendar onClose={onClose}>{children}</ModalCalendar>,
+    document.getElementById("modalCalendar")
   );
 }

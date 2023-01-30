@@ -3,13 +3,14 @@ import { UserContext } from "../context/UserContext";
 
 import styles from "../../styles/Calendar.module.css";
 
-export default function ScheduleAppointment({ date, myMovie }) {
-  const { schedule, setSchedule, setShowCalendar } = useContext(UserContext);
+export default function ScheduleAppointment({ date, myMovie, onSchedule}) {
+  const { schedule, setSchedule } = useContext(UserContext);
 
   const scheduleClick = () => {
     date.movieId = myMovie.id;
     date.title = myMovie.title;
-    setShowCalendar(false);
+
+    onSchedule && onSchedule();
 
     if (schedule.length === 0) return setSchedule([date]);
 

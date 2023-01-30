@@ -1,4 +1,4 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
@@ -6,9 +6,10 @@ export default function Document() {
       <Head />
       <body>
         <Main />
-        <div id="modalAuth"></div>
+        <div id="modalAuth" />
+        <div id="modalCalendar" />
         <NextScript />
       </body>
     </Html>
-  )
+  );
 }

@@ -1,18 +1,24 @@
-import { useContext } from "react";
+import { useState } from "react";
 import Schedule from "./Schedule";
 import styles from "../../styles/Buttons.module.css";
-import { UserContext } from "../context/UserContext";
+import ModalCalendar from "./ModalCalendar";
 
 export default function CalendarButton({ myMovie }) {
-  const { showCalendar, setShowCalendar } = useContext(UserContext);
-
-  console.log("from CalendarButton", showCalendar);
+  const [showModal, setShowModal] = useState(false);
 
   const visibleCLick = () => {
-    setShowCalendar(true);
+    return setShowModal(true);
   };
 
-  if (showCalendar) {
+  const handleClose = () => {
+    setShowModal(false);
+  };
+
+  const handleSchedule = () => {
+    setShowModal(false);
+  };
+
+  if (showModal) {
     document.body.classList.add("active-calendar");
   } else {
     document.body.classList.remove("active-calendar");
@@ -23,7 +29,12 @@ export default function CalendarButton({ myMovie }) {
       <div className={styles.actionButtons}>
         <button onClick={visibleCLick}>Show 📆</button>
       </div>
-      {showCalendar && <Schedule myMovie={myMovie} />}
+      {showModal && (
+        <ModalCalendar onClose={handleClose}>
+          <Schedule myMovie={myMovie} onSchedule={handleSchedule} />
+        </ModalCalendar>
+      )}
+      {console.log(showModal)}
     </>
   );
 }
