@@ -19,10 +19,6 @@ const links = [
     label: "About",
     route: "/about",
   },
-  {
-    label: "Login",
-    route: "/login",
-  },
 ];
 
 export default function Navigation() {

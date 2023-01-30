@@ -1,0 +1,22 @@
+.modal{
+    background-color: rgba(255, 255, 255, 0.3);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    backdrop-filter: blur(6px);
+}
+
+.content{
+    background: rgb(13, 13, 26);
+    width: 300px;
+    padding: 10px 20px;
+    height: 80vh;
+    margin: 10vh auto;
+    position: relative;
+}
+
+.content button {
+    margin-bottom: 32px;
+}
