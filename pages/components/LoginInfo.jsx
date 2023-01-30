@@ -9,7 +9,7 @@ export default function LoginInfo() {
 
   return (
     <Link href="/login" className={styles.profile}>
-      <p>{!user ? "Pending to login" : user.name}</p>
+      <p>{!user ? "No user" : user.name}</p>
       <Image
         width={50}
         height={50}

@@ -20,7 +20,7 @@ export default function ScheduleAppointment({ date, myMovie, onSchedule}) {
   return (
     <>
       <button onClick={scheduleClick} className={styles.btn}>
-        Schedule the selected day 🎥✅
+        Schedule the selected day 🍿
       </button>
     </>
   );
