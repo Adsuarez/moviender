@@ -34,7 +34,6 @@ export default function CalendarButton({ myMovie }) {
           <Schedule myMovie={myMovie} onSchedule={handleSchedule} />
         </ModalCalendar>
       )}
-      {console.log(showModal)}
     </>
   );
 }

@@ -1,9 +1,10 @@
-import styles from '../../styles/PageMyMovies.module.css'
+import styles from "../../styles/PageMyMovies.module.css";
 
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { UserContext } from "../context/UserContext";
 import PosterImage from "../components/PosterImage";
 import CalendarButton from "./CalendarButton";
+import SearchMovies from "../services/SearchMovies";
 
 function CategoryOrganizer(myMovies, feel) {
   return (
@@ -30,9 +31,11 @@ function CategoryOrganizer(myMovies, feel) {
   );
 }
 
-export function Category({ title = "movies you like" }) {
+export function Category() {
   const { myMovies, setMyMovies } = useContext(UserContext);
-  console.log(myMovies)
+  //const [movie, setMovie] = useState(SearchMovies());
+  const ID = 315162;
+  console.log(SearchMovies(ID));
 
   return (
     <div>
