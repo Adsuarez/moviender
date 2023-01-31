@@ -27,7 +27,7 @@ Tasks:
 - ✅Separate styles from components to styles folder
 - ❌Use Id in scheduled dates because is needed in id of the Key property in map function
 - ❌Create profile info or setting and logout wehn clicking on avatar or user name
-- ❌Create protected routes when is not login
+- ✅Create protected routes when is not login
 - ❌Create an invitation to register when is reading the About page
 - ❌Create a dinamic head in each page
 - ❌Create options to rewrite the schedule if is selected a new date for the same movie more than one time

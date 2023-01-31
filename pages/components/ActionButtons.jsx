@@ -1,29 +1,38 @@
 import { useState, useContext } from "react";
 import { UserContext } from "../context/UserContext";
-import { useRouter } from "next/router";
 import styles from "../../styles/Buttons.module.css";
 import ModalAuth from "./ModalAuth";
 import Login from "./Login";
 
-export function ActionButtons({ movie }) {
+export function ActionButtons({ id }) {
   const [showModal, setShowModal] = useState(false);
   const { user, setMyMovies, myMovies } = useContext(UserContext);
-  const router = useRouter();
 
   const handleClick = (event) => {
-    //if (!user) return router.push("/login");
     if (!user) return setShowModal(true);
 
-    movie.feeling = event.target.name;
+    const feeling = event.target.name;
 
-    if (myMovies.length === 0) return setMyMovies([movie]);
+    if (myMovies.length === 0)
+      return setMyMovies([
+        {
+          id,
+          feeling,
+        },
+      ]);
 
     const evaluateRepetId = myMovies.map(
-      (myMovie) => myMovie.id !== movie.id || false
+      (myMovie) => myMovie.id !== id || false
     );
 
     if (evaluateRepetId.every((item) => item === true))
-      return setMyMovies([...myMovies, movie]);
+      return setMyMovies([
+        ...myMovies,
+        {
+          id,
+          feeling,
+        },
+      ]);
   };
 
   const handleClose = () => {

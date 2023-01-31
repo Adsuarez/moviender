@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/PageHome.module.css";
-import { FetchMovies } from "./services/FetchMovies.jsx";
+import MoviesList from './components/MoviesList'
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       <h1>Welcome to Movienderingverse</h1>
       <div className="movies">
-        <FetchMovies/>
+        <MoviesList/>
       </div>
     </div>
   );

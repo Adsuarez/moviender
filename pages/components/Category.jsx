@@ -15,13 +15,13 @@ function CategoryOrganizer(myMovies, feel) {
           .map((myMovie) => (
             <div key={myMovie.id} className="singleMovie">
               <section className={styles.sectionMovie}>
-                <p>{myMovie.title}</p>
+                {/* <p>{myMovie.title}</p> */}
                 <CalendarButton myMovie={myMovie} />
-                <PosterImage
+                {/* <PosterImage
                   path={myMovie.poster_path}
                   title={myMovie.title}
                   className={styles.poster}
-                />
+                /> */}
               </section>
             </div>
           ))}
@@ -32,6 +32,7 @@ function CategoryOrganizer(myMovies, feel) {
 
 export function Category({ title = "movies you like" }) {
   const { myMovies, setMyMovies } = useContext(UserContext);
+  console.log(myMovies)
 
   return (
     <div>
