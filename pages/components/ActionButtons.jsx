@@ -14,26 +14,45 @@ export function ActionButtons({ id }) {
     if (!user) return setShowModal(true);
 
     const feeling1 = event.target.name;
-    const [feeling2, feeling3] = FEELINGS.filter(feel => feel !== feeling1);
+    const [feeling2, feeling3] = FEELINGS.filter((feel) => feel !== feeling1);
 
     if (myMovies.length === 0)
       return setMyMovies([
         {
           [feeling1]: [id],
         },
-      ]);
-
-    const evaluateRepetId = myMovies.map((myMovie) =>
-      myMovie.feeling.findIndex((itemId) => itemId === id)
-    );
-
-    if (evaluateRepetId.every((item) => item === -1))
-      return setMyMovies([
-        ...myMovies,
         {
-          feeling: [id],
+          [feeling2]: [],
+        },
+        {
+          [feeling3]: [],
         },
       ]);
+
+    let findRepeatedId = [];
+    
+    /* Verificar porque siemrpe llega -1, ver consola */
+    FEELINGS.forEach((feelings) => {
+      findRepeatedId = myMovies.map((item) => {
+        return item[feelings]
+          ? item[feelings].findIndex((itemId) => itemId === id)
+          : null;
+      });
+    });
+
+    console.log(findRepeatedId);
+
+    // const evaluateRepetId = myMovies.map((myMovie) =>
+    //   myMovie.feeling.findIndex((itemId) => itemId === id)
+    // );
+
+    // if (evaluateRepetId.every((item) => item === -1))
+    //   return setMyMovies([
+    //     ...myMovies,
+    //     {
+    //       feeling: [id],
+    //     },
+    //   ]);
   };
 
   const handleClose = () => {
@@ -46,13 +65,13 @@ export function ActionButtons({ id }) {
 
   return (
     <section className={styles.actionButtons}>
-      <button name="like" onClick={handleClick}>
+      <button name={"like"} onClick={handleClick}>
         Like ❤️
       </button>
-      <button name="desire" onClick={handleClick}>
+      <button name={"desire"} onClick={handleClick}>
         Desire 🍿
       </button>
-      <button name="dislike" onClick={handleClick}>
+      <button name={"dislike"} onClick={handleClick}>
         Dislike ❌
       </button>
       {showModal && (

@@ -35,35 +35,25 @@ export function Category() {
   const { myMovies, setMyMovies } = useContext(UserContext);
   const idList = myMovies.map((myMovie) => myMovie.id);
   const feelingsList = [...new Set(myMovies.map((myMovie) => myMovie.feeling))];
-  //const idByFeelingsList = 
-  console.log(myMovies);
-  //const { title, id, poster_path } = SearchMovies(idList[1]);
 
   return (
     <>
-      <div>
-        {feelingsList.map((feeling) => (
-          <div key={feeling}>
-            <h2>Movies i {feeling}</h2>
-            {idList.map((itemID) => (
-              <section key={itemID}>
-                {/* {myMovies.filter(myMovie => myMovie.id === itemID)} */}
-              <h3>{SearchMovies(itemID).title}</h3>
-              </section>
-              ))}
-          </div>
-        ))}
-      </div>
+      
     </>
   );
 }
 
 /*
-return (
-    <div>
-      {CategoryOrganizer(myMovies, "desire")}
-      {CategoryOrganizer(myMovies, "like")}
-      {CategoryOrganizer(myMovies, "dislike")}
-    </div>
-  );
-*/
+<div>
+        {feelingsList.map((feeling) => (
+          <div key={feeling}>
+            <h2>Movies i {feeling}</h2>
+            {idList.map((itemID) => (
+              <section key={itemID}>
+                { {myMovies.filter(myMovie => myMovie.id === itemID)} }
+                <h3>{SearchMovies(itemID).title}</h3>
+                </section>
+                ))}
+            </div>
+          ))}
+        </div> */
