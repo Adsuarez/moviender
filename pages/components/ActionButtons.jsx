@@ -4,6 +4,8 @@ import styles from "../../styles/Buttons.module.css";
 import ModalAuth from "./ModalAuth";
 import Login from "./Login";
 
+const FEELINGS = ["like", "desire", "dislike"];
+
 export function ActionButtons({ id }) {
   const [showModal, setShowModal] = useState(false);
   const { user, setMyMovies, myMovies } = useContext(UserContext);
@@ -11,26 +13,25 @@ export function ActionButtons({ id }) {
   const handleClick = (event) => {
     if (!user) return setShowModal(true);
 
-    const feeling = event.target.name;
+    const feeling1 = event.target.name;
+    const [feeling2, feeling3] = FEELINGS.filter(feel => feel !== feeling1);
 
     if (myMovies.length === 0)
       return setMyMovies([
         {
-          id,
-          feeling,
+          [feeling1]: [id],
         },
       ]);
 
-    const evaluateRepetId = myMovies.map(
-      (myMovie) => myMovie.id !== id || false
+    const evaluateRepetId = myMovies.map((myMovie) =>
+      myMovie.feeling.findIndex((itemId) => itemId === id)
     );
 
-    if (evaluateRepetId.every((item) => item === true))
+    if (evaluateRepetId.every((item) => item === -1))
       return setMyMovies([
         ...myMovies,
         {
-          id,
-          feeling,
+          feeling: [id],
         },
       ]);
   };
