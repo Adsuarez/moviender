@@ -31,13 +31,15 @@ export function ActionButtons({ id }) {
 
     let findRepeatedId = [];
     
-    /* Verificar porque siemrpe llega -1, ver consola */
+    console.log(myMovies.map(item => Object.keys(item)))
+    //console.log(myMovies.map((item) => item));
+
     FEELINGS.forEach((feelings) => {
-      findRepeatedId = myMovies.map((item) => {
-        return item[feelings]
+      findRepeatedId = myMovies.map((item) =>
+        item[feelings]
           ? item[feelings].findIndex((itemId) => itemId === id)
-          : null;
-      });
+          : null
+      );
     });
 
     console.log(findRepeatedId);
