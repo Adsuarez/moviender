@@ -33,17 +33,25 @@ function CategoryOrganizer(myMovies, feel) {
 
 export function Category() {
   const { myMovies, setMyMovies } = useContext(UserContext);
-  const idList = myMovies.map((myMovie) => myMovie.id);
-  const feelingsList = [...new Set(myMovies.map((myMovie) => myMovie.feeling))];
 
   return (
     <>
-      
+      {myMovies.map((item) => (
+        <ul key={Object.keys(item)[0]}>
+          <h3>Movies i {Object.keys(item)[0]}</h3>
+          {Object.values(item)[0].map((itemId) => (
+            <li key={itemId}>{itemId}</li>
+          ))}
+        </ul>
+      ))}
     </>
   );
 }
 
 /*
+const idList = myMovies.map((myMovie) => myMovie.id);
+  const feelingsList = [...new Set(myMovies.map((myMovie) => myMovie.feeling))];
+
 <div>
         {feelingsList.map((feeling) => (
           <div key={feeling}>
