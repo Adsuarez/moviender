@@ -5,7 +5,6 @@ import { UserContext } from "../context/UserContext";
 import PosterImage from "../components/PosterImage";
 import CalendarButton from "./CalendarButton";
 import SearchSingleMovie from "../services/SearchSingleMovie";
-import { FEELINGS } from "../services/MyMoviesSaver";
 
 function CategoryOrganizer(myMovies, feel) {
   const [feelObject] = myMovies.filter((item) => Object.keys(item)[0] === feel);
@@ -20,20 +19,21 @@ function CategoryOrganizer(myMovies, feel) {
     <>
       <h3>Movies i {feel}</h3>
       <section className={`styles.section movies`}>
-        {idsList.map((itemId) => (
-          <div key={itemId} className="singleMovie">
-            <section className={styles.sectionMovie}>
-              {/* <p>{myMovie.title}</p> */}
-              <p>{itemId}</p>
-              {/* <CalendarButton myMovie={myMovie} /> */}
-              {/* <PosterImage
-                  path={myMovie.poster_path}
-                  title={myMovie.title}
-                  className={styles.poster}
-                /> */}
-            </section>
-          </div>
-        ))}
+        {idsList.map((itemId) => {
+          const { title, poster_path } = SearchSingleMovie(itemId);
+          return (
+            <div key={itemId} className="singleMovie">
+              <section className={styles.sectionMovie}>
+                <p>{title}</p>
+                <CalendarButton myMovie={SearchSingleMovie(itemId)} />
+                <PosterImage
+                  path={poster_path}
+                  title={title}
+                />
+              </section>
+            </div>
+          );
+        })}
       </section>
     </>
   );
@@ -50,28 +50,3 @@ export function Category() {
     </>
   );
 }
-
-/*
-return (
-    <>
-      <h3>Movies i {feel}</h3>
-      <section className={`styles.section movies`}>
-        {myMovies
-          .filter((item) => Object.keys(item)[0] === feel)
-          .map((myMovie) => (
-            <div key={myMovie.id} className="singleMovie">
-              <section className={styles.sectionMovie}>
-                { <p>{myMovie.title}</p> }
-                <CalendarButton myMovie={myMovie} />
-                { <PosterImage
-                  path={myMovie.poster_path}
-                  title={myMovie.title}
-                  className={styles.poster}
-                /> }
-              </section>
-            </div>
-          ))}
-      </section>
-    </>
-  );
-*/

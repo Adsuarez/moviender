@@ -30,14 +30,14 @@ Tasks:
 - ✅Create protected routes when is not login
 - ❌Create an invitation to register when is reading the About page
 - ❌Create a dinamic head in each page
-- ❌Create options to rewrite the schedule if is selected a new date for the same movie more than one time
-- ❌Fix the style 100% or 100vh in .div class for all pages
+- ❌Create options to rewrite the schedule if is selected a new date for the same movie one more time
+- ❌Fix the style 100% or 100vh in .div class for all pages because background is damage
 - ❌Add a message or animation when user click Schedule button on calendar
 - ✅Add a backdropfilter on nav-bar
 - ❌Make reasponsive and mobileOnly the app
-- ❌Optimize the modal in calendar with a portal or let it be with UserContext
+- ✅Optimize the modal in calendar with a portal or let it be with UserContext
 - ❌Optimize the performance becouse there are re-renders in all pages
-- ❌Solve error about calendary duplicated when change the month
+- ✅Solve error about calendary duplicated when change the month
 - ❌Create a conditional render to show buttons acording to the feeling in home
 - ❌block the scroll when is in modalAuth to prevent download movies
 - ❌Save the position of the page or scroll when the user is no log, because when is log the page send them to the first page
