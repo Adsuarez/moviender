@@ -1,8 +1,13 @@
+import { useContext } from "react";
+import { UserContext } from "./context/UserContext";
+
 import Head from "next/head";
 import styles from "../styles/PageHome.module.css";
 import MoviesList from './components/MoviesList'
 
 export default function Home() {
+  const { myMovies } = useContext(UserContext);
+
   return (
     <div className={styles.div}>
       <Head>
@@ -13,7 +18,7 @@ export default function Home() {
       </Head>
       <h1>Welcome to Movienderingverse</h1>
       <div className="movies">
-        <MoviesList/>
+        <MoviesList myMovies={myMovies}/>
       </div>
     </div>
   );

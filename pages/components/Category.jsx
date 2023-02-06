@@ -26,10 +26,7 @@ function CategoryOrganizer(myMovies, feel) {
               <section className={styles.sectionMovie}>
                 <p>{title}</p>
                 <CalendarButton myMovie={SearchSingleMovie(itemId)} />
-                <PosterImage
-                  path={poster_path}
-                  title={title}
-                />
+                <PosterImage path={poster_path} title={title} />
               </section>
             </div>
           );

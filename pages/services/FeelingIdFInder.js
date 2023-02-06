@@ -1,6 +1,3 @@
-import { useContext } from "react";
-import { UserContext } from "../context/UserContext";
-
 const FEELINGS = {
   like: "❤️",
   desire: "🍿",
@@ -8,8 +5,7 @@ const FEELINGS = {
   null: "",
 };
 
-export default function FeelingIdFinder(id) {
-  const { myMovies } = useContext(UserContext);
+export default function FeelingIdFinder(id, myMovies) {
   let feelingById = "";
 
   myMovies.forEach((feelingObject) => {
