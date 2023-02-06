@@ -5,14 +5,19 @@ const FEELINGS = {
   like: "❤️",
   desire: "🍿",
   dislike: "❌",
+  null: "",
 };
 
 export default function FeelingIdFinder(id) {
   const { myMovies } = useContext(UserContext);
+  let feelingById = "";
 
-  return myMovies.map((feelingObject) => {
-    console.log(
-      Object.values(feelingObject)[0].findIndex((itemId) => itemId === id)
-    );
+  myMovies.forEach((feelingObject) => {
+    const idsList = Object.values(feelingObject)[0];
+    idsList.find((itemId) => itemId === id) === undefined
+      ? null
+      : (feelingById = Object.keys(feelingObject)[0]);
   });
+
+  return FEELINGS[feelingById];
 }
