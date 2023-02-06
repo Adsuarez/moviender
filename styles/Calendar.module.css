@@ -2,5 +2,11 @@
   background-color: rgb(54, 185, 141);
   border-style: hidden;
   border-radius: 8px;
-  margin: 16px auto;
+  margin: 5px auto;
+}
+
+
+
+.myCalendar button{
+  padding: 0;
 }

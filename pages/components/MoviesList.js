@@ -1,15 +1,18 @@
 import FetchMovies from "../services/FetchMovies";
 import { ActionButtons } from "../components/ActionButtons";
 import PosterImage from "../components/PosterImage";
+import FeelingIdFinder from "../services/FeelingIdFInder";
 
 export default function MoviesList() {
   const { movies } = FetchMovies();
+  FeelingIdFinder(315162)
 
   return (
     <>
       {movies.map((movie) => (
         <div key={movie.id} className="singleMovie">
-          <p>{movie.title}</p>
+          <p>{movie.title}</p>          
+          {movie.id}
           <section className="movieImgButtons">
             <PosterImage path={movie.poster_path} title={movie.title} />
             <ActionButtons id={movie.id} />
