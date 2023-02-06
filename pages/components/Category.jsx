@@ -5,6 +5,7 @@ import { UserContext } from "../context/UserContext";
 import PosterImage from "../components/PosterImage";
 import CalendarButton from "./CalendarButton";
 import SearchSingleMovie from "../services/SearchSingleMovie";
+import { FEELINGS } from "../services/FeelingIdFInder";
 
 function CategoryOrganizer(myMovies, feel) {
   const [feelObject] = myMovies.filter((item) => Object.keys(item)[0] === feel);
@@ -17,7 +18,7 @@ function CategoryOrganizer(myMovies, feel) {
 
   return (
     <>
-      <h3>Movies i {feel}</h3>
+      <h3>Movies i {feel} {FEELINGS[feel]}</h3>
       <section className={`styles.section movies`}>
         {idsList.map((itemId) => {
           const { title, poster_path } = SearchSingleMovie(itemId);
