@@ -16,21 +16,25 @@ const links = [
     label: "Home",
     route: "/",
     access: ACCESS_LEVEL[0],
+    icon: "fa-solid fa-house",
   },
   {
     label: "My movies",
     route: "mymovies",
     access: ACCESS_LEVEL[1],
+    icon: "fa-solid fa-box-open",
   },
   {
     label: "Moviendering",
     route: "/moviendering",
     access: ACCESS_LEVEL[1],
+    icon: "fa-solid fa-film",
   },
   {
     label: "About",
     route: "/about",
     access: ACCESS_LEVEL[0],
+    icon: "fa-solid fa-circle-info",
   },
 ];
 
@@ -41,16 +45,20 @@ export default function Navigation() {
     <div className={styles.navigation}>
       <ul>
         {user
-          ? links.map(({ label, route }) => (
+          ? links.map(({ route, icon }) => (
               <li key={route}>
-                <Link href={route}>{label}</Link>
+                <Link href={route}>
+                  <i className={icon} />
+                </Link>
               </li>
             ))
-          : links.map(({ label, route, access }) =>
+          : links.map(({ route, access, icon }) =>
               access === "all" ? (
                 <li key={route}>
-                  <Link href={route}>{label}</Link>
-                </li>
+                <Link href={route}>
+                  <i className={icon} />
+                </Link>
+              </li>
               ) : null
             )}
       </ul>

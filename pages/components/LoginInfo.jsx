@@ -8,10 +8,9 @@ export default function LoginInfo() {
 
   return (
     <Link href="/login">
-      <p>{!user ? "No user" : user.name}</p>
       <Image
-        width={50}
-        height={50}
+        width={40}
+        height={40}
         alt="Profile"
         src={!user ? "https://avatars.dicebear.com/api/avataaars/user1.svg" : "https://avatars.dicebear.com/api/avataaars/user0.svg"}
       />

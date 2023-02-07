@@ -13,7 +13,6 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  max-width: 1440px;
   margin: 0 auto;
   background: linear-gradient(to top, rgb(6, 7, 15), rgb(17, 17, 68));
   color: aliceblue;
@@ -30,7 +29,7 @@ h3 {
 }
 
 h1 {
-  padding-top: 7rem;
+  padding-top: 1.5em;
 }
 
 p {
@@ -45,10 +44,9 @@ p {
 }
 
 .movies {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
   text-align: center;
 }
 
@@ -72,3 +70,12 @@ body.active-calendar {
   overflow-y: hidden;
 }
 
+@media (min-width: 500px){
+  .movies {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    text-align: center;
+  }
+}

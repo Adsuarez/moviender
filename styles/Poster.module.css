@@ -1,4 +1,6 @@
 .poster {
     padding-bottom: 10px;
     border-radius: 5px;
+    width: auto;
+    height: auto;
 }
