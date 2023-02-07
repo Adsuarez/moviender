@@ -1,8 +1,7 @@
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
-import ComponentStyles from "../../styles/Buttons.module.css";
+import styles from "../../styles/Buttons.module.css";
 import { useRouter } from "next/router";
-import styles from "../../styles/PageLogin.module.css";
 
 export default function Login({ onLogin }) {
   const { user, setUser } = useContext(UserContext);
@@ -33,7 +32,7 @@ export default function Login({ onLogin }) {
 
   return (
     <div className={styles.div}>
-      <form className={ComponentStyles.actionButtons}>
+      <form className={styles.actionButtons}>
         {!user ? (
           <button onClick={login}>Login</button>
         ) : (
