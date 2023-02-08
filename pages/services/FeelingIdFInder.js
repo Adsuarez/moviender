@@ -1,7 +1,7 @@
 export const FEELINGS = {
-  like: "❤️",
-  desire: "🍿",
-  dislike: "❌",
+  like: "like",
+  desire: "desire",
+  dislike: "dislike",
   null: "",
 };
 

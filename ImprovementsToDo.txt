@@ -42,3 +42,4 @@ Tasks:
 - ❌block the scroll when is in modalAuth to prevent download movies
 - ❌Save the position of the page or scroll when the user is no log, because when is log the page send them to the first page
 - ❌Create option to change the feeling for a movie, maybe a little modal on the emoji
+- ❌make logout and setting avatar page a modal

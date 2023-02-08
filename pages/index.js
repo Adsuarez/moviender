@@ -5,7 +5,7 @@ import Head from "next/head";
 import MoviesList from "./components/MoviesList";
 
 export default function Home() {
-  const { myMovies } = useContext(UserContext);
+  const { myMovies, user } = useContext(UserContext);
 
   return (
     <div>
@@ -17,7 +17,7 @@ export default function Home() {
       </Head>
       <h1>Welcome to Movienderingverse</h1>
       <div className="movies">
-        <MoviesList myMovies={myMovies} />
+        <MoviesList myMovies={myMovies} user={user} />
       </div>
     </div>
   );

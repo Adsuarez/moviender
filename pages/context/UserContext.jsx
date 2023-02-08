@@ -6,7 +6,7 @@ export function UserContextProvider(props) {
   const [user, setUser] = useState(null);
   const [myMovies, setMyMovies] = useState([]);
   const [schedule, setSchedule] = useState([]);
-  
+
   return (
     <UserContext.Provider
       value={{
