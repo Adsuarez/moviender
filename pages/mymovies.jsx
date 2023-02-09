@@ -6,7 +6,9 @@ export default function MyMoviesPage() {
   return (
     <div className={styles.div}>
       <h1>These are my movies</h1>
-      <Category />
+      <Category feeling={"desire"}/>
+      <Category feeling={"like"}/>
+      <Category feeling={"dislike"}/>
     </div>
   );
 }
