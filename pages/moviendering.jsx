@@ -9,12 +9,12 @@ export default function MovienderingPage() {
     <div>
       <h1>Lets Moviendering</h1>
       <h2>Schedule movies appointment</h2>
-      {schedule.map((date) => (
-        <section key={date}>
-          <h3>{date.title}</h3>
-          <p>{date.getUTCDate()}</p>
-          <p>{date.getUTCMonth() + 1}</p>
-          <p>{date.getUTCFullYear()}</p>
+      {schedule.map((item) => (
+        <section key={Number(item.id)+Math.random()}>
+          <h3>{item.title}</h3>
+          <p>{item.date.getUTCDate()}</p>
+          <p>{item.date.getUTCMonth() + 1}</p>
+          <p>{item.date.getUTCFullYear()}</p>
         </section>
       ))}
     </div>

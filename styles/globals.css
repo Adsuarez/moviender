@@ -14,11 +14,11 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  background: linear-gradient(to top, rgb(6, 7, 15), rgb(17, 17, 68));
   color: aliceblue;
   height: 100vh;
   height: -webkit-fill-available;
   text-align: center;
+  background: linear-gradient(to left top, rgb(6, 7, 15), rgb(17, 17, 68));
 }
 
 h1,

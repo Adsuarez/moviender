@@ -14,9 +14,9 @@ Tasks:
 - 🟢organize CSS in Home Page.
 - 🟢organize CSS in My MOvies Page.
 - 🟠organize CSS in Scheule Page.
-- 🟠organize CSS in About Page.
+- 🟢organize CSS in About Page.
 - 🟠organize CSS in Login Page.
-- 🟠organize CSS in UserInfo Page.
+- 🟢organize CSS in UserInfo avatar.
 - ✅separate components and hooks (create customHooks if need it).
 - ❌create a big calendar o some way to see schedule in Movindering.
 - ❌Create the real LogIn
@@ -25,12 +25,12 @@ Tasks:
 - ✅redirect before login
 - ❓Calendar options to schedule only in desire and like movies.
 - ✅Separate styles from components to styles folder
-- ❌Use Id in scheduled dates because is needed in id of the Key property in map function
-- ❌Create profile info or setting and logout wehn clicking on avatar or user name
+- ✅Use Id in scheduled dates because is needed in id of the Key property in map function
+- 🟠Create profile info or setting and logout wehn clicking on avatar or user name
 - ✅Create protected routes when is not login
 - ❌Create an invitation to register when is reading the About page
 - ❌Create a dinamic head in each page
-- ❌Create options to rewrite the schedule if is selected a new date for the same movie one more time
+- ❓ Create options to rewrite the schedule if is selected a new date for the same movie one more time
 - ❌Fix the style 100% or 100vh in .div class for all pages because background is damage
 - ❌Add a message or animation when user click Schedule button on calendar
 - ✅Add a backdropfilter on nav-bar
