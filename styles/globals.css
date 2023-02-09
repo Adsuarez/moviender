@@ -15,10 +15,10 @@ body {
   flex-direction: column;
   margin: 0 auto;
   color: aliceblue;
-  height: 100vh;
+  height: 100%;
   height: -webkit-fill-available;
   text-align: center;
-  background: linear-gradient(to left top, rgb(6, 7, 15), rgb(17, 17, 68));
+  background: linear-gradient(to top, rgb(6, 7, 15), rgb(17, 17, 68));
 }
 
 h1,
@@ -43,7 +43,7 @@ p {
   backdrop-filter: blur(8px);
 }
 
-.movies {
+/* .movies {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -64,7 +64,7 @@ p {
   gap: 4px;
   justify-content: space-around;
   align-items: center;
-}
+} */
 
 body.active-calendar {
   overflow-y: hidden;
