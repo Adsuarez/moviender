@@ -26,20 +26,24 @@ export function Category({ feeling }) {
       {user && (
         <div key={feeling}>
           <h3>Movies i {feeling}</h3>
-          <section className={`styles.section movies`}>
-            {idsList.map((itemId) => {
-              const { title, poster_path } = SearchSingleMovie(itemId);
-              return (
-                <div key={itemId} className="singleMovie">
-                  <section className={styles.sectionMovie}>
-                    <p>{title}</p>
-                    <CalendarButton myMovie={SearchSingleMovie(itemId)} />
-                    <PosterImage path={poster_path} title={title} />
-                  </section>
-                </div>
-              );
-            })}
-          </section>
+          {idsList.length > 0 ? (
+            <section className={`styles.section movies`}>
+              {idsList.map((itemId) => {
+                const { title, poster_path } = SearchSingleMovie(itemId);
+                return (
+                  <div key={itemId} className="singleMovie">
+                    <section className={styles.sectionMovie}>
+                      <p>{title}</p>
+                      <CalendarButton myMovie={SearchSingleMovie(itemId)} />
+                      <PosterImage path={poster_path} title={title} />
+                    </section>
+                  </div>
+                );
+              })}
+            </section>
+          ) : (
+            <p>Here will appear the movies you chose in home page</p>
+          )}
         </div>
       )}
     </>

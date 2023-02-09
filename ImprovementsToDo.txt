@@ -34,7 +34,7 @@ Tasks:
 - ❌Fix the style 100% or 100vh in .div class for all pages because background is damage
 - ❌Add a message or animation when user click Schedule button on calendar
 - ✅Add a backdropfilter on nav-bar
-- ❌Make reasponsive and mobileOnly the app
+- 🟠Make reasponsive and mobileOnly the app
 - ✅Optimize the modal in calendar with a portal or let it be with UserContext
 - ❌Optimize the performance becouse there are re-renders in all pages
 - ✅Solve error about calendary duplicated when change the month
@@ -43,3 +43,6 @@ Tasks:
 - ❌Save the position of the page or scroll when the user is no log, because when is log the page send them to the first page
 - ❌Create option to change the feeling for a movie, maybe a little modal on the emoji
 - ❌make logout and setting avatar page a modal
+- ❌define if use one modal besides two, because are almost the same.
+- ❌Make a message with image and style to inform about the things in each page, for example "here will appear the movies..." not looks good.
+- ❌make an animation or way to minimize importance (may be with minus size) to the movies that select a feeling in home page.
