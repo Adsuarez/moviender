@@ -31,7 +31,7 @@ Tasks:
 - ❌Create an invitation to register when is reading the About page
 - ❌Create a dinamic head in each page
 - ❓ Create options to rewrite the schedule if is selected a new date for the same movie one more time
-- ❌Fix the style 100% or 100vh in .div class for all pages because background is damage
+- ✅Fix the style 100% or 100vh in .div class for all pages because background is damage
 - ❌Add a message or animation when user click Schedule button on calendar
 - ✅Add a backdropfilter on nav-bar
 - 🟠Make reasponsive and mobileOnly the app
@@ -46,3 +46,4 @@ Tasks:
 - ❌define if use one modal besides two, because are almost the same.
 - ❌Make a message with image and style to inform about the things in each page, for example "here will appear the movies..." not looks good.
 - ❌make an animation or way to minimize importance (may be with minus size) to the movies that select a feeling in home page.
+- ❌create placeholders to movies before their will be created or fetched

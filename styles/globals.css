@@ -15,7 +15,7 @@ body {
   flex-direction: column;
   margin: 0 auto;
   color: aliceblue;
-  height: 100%;
+  height: 100vh;
   height: -webkit-fill-available;
   text-align: center;
   background: linear-gradient(to top, rgb(6, 7, 15), rgb(17, 17, 68));
@@ -43,57 +43,6 @@ p {
   backdrop-filter: blur(8px);
 }
 
-/* .movies {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  text-align: center;
-}
-
-.singleMovie {
-  background: rgba(74, 74, 168, 0.1);
-  border-radius: 5px;
-}
-
-.singleMovie:hover {
-  background: rgba(74, 74, 168, 0.2);
-}
-
-.movieImgButtons {
-  display: flex;
-  gap: 4px;
-  justify-content: space-around;
-  align-items: center;
-} */
-
 body.active-calendar {
   overflow-y: hidden;
-}
-
-@media (min-width: 440px) {
-  .movies {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
-    text-align: center;
-  }
-}
-
-@media (min-width: 750px) {
-  .movies {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .movies {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (min-width: 1600px){
-  .movies {
-    grid-template-columns: repeat(5, 1fr);
-  }
 }

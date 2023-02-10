@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { UserContext } from "./context/UserContext";
 
 import Head from "next/head";
-import MoviesList from "./components/moviesList";
+import MoviesList from "./components/MoviesList";
 
 import styles from '../styles/MoviesList.module.css'
 

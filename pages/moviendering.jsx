@@ -6,7 +6,7 @@ export default function MovienderingPage() {
   const { schedule } = useContext(UserContext);
 
   return (
-    <div>
+    <div className="mainDiv">
       <h1>Lets Moviendering</h1>
       <h2>Schedule movies appointment</h2>
       {schedule.map((item) => (

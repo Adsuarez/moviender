@@ -1,4 +1,4 @@
-import styles from "../../styles/PageMyMovies.module.css";
+import styles from "../../styles/MoviesList.module.css";
 
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
@@ -27,15 +27,15 @@ export function Category({ feeling }) {
         <div key={feeling}>
           <h3>Movies i {feeling}</h3>
           {idsList.length > 0 ? (
-            <section className={`styles.section movies`}>
+            <section className={styles.movies}>
               {idsList.map((itemId) => {
                 const { title, poster_path } = SearchSingleMovie(itemId);
                 return (
-                  <div key={itemId} className="singleMovie">
-                    <section className={styles.sectionMovie}>
-                      <p>{title}</p>
-                      <CalendarButton myMovie={SearchSingleMovie(itemId)} />
+                  <div key={itemId} className={styles.singleMovie}>
+                    <p>{title}</p>
+                    <section className={styles.movieImgButtons}>
                       <PosterImage path={poster_path} title={title} />
+                      <CalendarButton myMovie={SearchSingleMovie(itemId)} />
                     </section>
                   </div>
                 );

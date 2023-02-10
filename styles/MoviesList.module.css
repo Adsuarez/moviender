@@ -18,8 +18,37 @@
 }
 
 .movieImgButtons {
-  flex-direction: row;
-  gap: 4px;
+  display: flex;
+  gap: 40px;
   justify-content: space-around;
   align-items: center;
+}
+
+
+@media (min-width: 440px) {
+  .movies {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    text-align: center;
+  }
+}
+
+@media (min-width: 750px) {
+  .movies {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .movies {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1600px){
+  .movies {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
