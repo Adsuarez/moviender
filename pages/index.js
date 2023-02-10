@@ -1,14 +1,23 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { UserContext } from "./context/UserContext";
 
 import Head from "next/head";
 import MoviesList from "./components/MoviesList";
 
-import styles from '../styles/MoviesList.module.css'
+import styles from "../styles/MoviesList.module.css";
 
 export default function Home() {
   const { myMovies, user } = useContext(UserContext);
+  const [keyword, setKeyword] = useState("");
 
+  const handleSearch = (event) => {
+    event.preventDefault();
+    console.log(keyword);
+  };
+
+  const handleChange = (event) => {
+    setKeyword(event.target.value);
+  };
   return (
     <div className={styles.divMovies}>
       <Head>
@@ -18,6 +27,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>Welcome to Movienderingverse</h1>
+      <form onSubmit={handleSearch}>
+        <input
+          name="searchInput"
+          placeholder="write about a movie"
+          onChange={handleChange}
+        ></input>
+        <button>Search</button>
+      </form>
       <div className={styles.movies}>
         <MoviesList myMovies={myMovies} user={user} />
       </div>
