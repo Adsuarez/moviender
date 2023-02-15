@@ -8,14 +8,14 @@ const END_POINT = "/search/keyword";
 const LANGUAGE = "es-CO";
 
 export default function SearchMoviesByKeyword(keyword) {
-  const [movies, setMovies] = useState([]);
+  const [foundMovies, setFoundMovies] = useState([]);
 
   useEffect(() => {
     fetch(`${API}${END_POINT}?api_key=${API_KEY}&query=${keyword}page=1`)
       .then((response) => response.json())
-      .then((data) => setMovies(data))
+      .then((data) => setFoundMovies(data))
       .catch((error) => console.error(error));
-  }, [keyword]);
+  }, [keyword, foundMovies, setFoundMovies]);
 
-  return movies;
+  return foundMovies;
 }

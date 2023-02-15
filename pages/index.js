@@ -1,23 +1,31 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { UserContext } from "./context/UserContext";
+
+import styles from "../styles/MoviesList.module.css";
 
 import Head from "next/head";
 import MoviesList from "./components/MoviesList";
-
-import styles from "../styles/MoviesList.module.css";
+//import SearchMoviesByKeyword from "./services/SearchMoviesByKeyword";
+import { useMoviesByKeyword } from "./hooks/useMoviesByKeyword";
 
 export default function Home() {
   const { myMovies, user } = useContext(UserContext);
   const [keyword, setKeyword] = useState("");
+  const foundMovies = useMoviesByKeyword(keyword);
+  const inputSearchRef = useRef("");
 
   const handleSearch = (event) => {
     event.preventDefault();
-    console.log(keyword);
+    setKeyword(inputSearchRef.current);
+    //console.log(foundMovies);
+    //console.log(inputSearchRef.current)
   };
 
   const handleChange = (event) => {
-    setKeyword(event.target.value);
+    //setKeyword(event.target.value);
+    inputSearchRef.current = event.target.value;
   };
+
   return (
     <div className={styles.divMovies}>
       <Head>
@@ -32,6 +40,7 @@ export default function Home() {
           name="searchInput"
           placeholder="write about a movie"
           onChange={handleChange}
+          ref={inputSearchRef}
         ></input>
         <button>Search</button>
       </form>
