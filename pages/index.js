@@ -1,4 +1,4 @@
-import { useContext, useRef, useState } from "react";
+import { Suspense, useContext, useRef, useState } from "react";
 import { UserContext } from "./context/UserContext";
 
 import styles from "../styles/MoviesList.module.css";
@@ -16,14 +16,11 @@ export default function Home() {
 
   const handleSearch = (event) => {
     event.preventDefault();
-    setKeyword(inputSearchRef.current);
-    //console.log(foundMovies);
-    //console.log(inputSearchRef.current)
+    inputSearchRef.current.value = "";
   };
 
   const handleChange = (event) => {
-    //setKeyword(event.target.value);
-    inputSearchRef.current = event.target.value;
+    setKeyword(event.target.value);
   };
 
   return (
@@ -38,14 +35,25 @@ export default function Home() {
       <form onSubmit={handleSearch}>
         <input
           name="searchInput"
-          placeholder="write about a movie"
+          type="text"
+          placeholder="write a movie title"
           onChange={handleChange}
           ref={inputSearchRef}
         ></input>
         <button>Search</button>
       </form>
       <div className={styles.movies}>
-        <MoviesList myMovies={myMovies} user={user} />
+        {keyword === "" ? (
+          <MoviesList getAllMovies={false} myMovies={myMovies} user={user} />
+        ) : (
+          foundMovies &&
+          foundMovies.length > 0 &&
+          foundMovies.map((movie) => (
+            <div key={movie.id}>
+              <p>{movie.title}</p>
+            </div>
+          ))
+        )}
       </div>
     </div>
   );

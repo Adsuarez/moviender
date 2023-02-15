@@ -2,7 +2,7 @@ import FetchMovies from "../services/FetchMovies";
 import { ActionButtons } from "../components/ActionButtons";
 import PosterImage from "../components/PosterImage";
 import FeelingIdFinder from "../services/FeelingIdFInder";
-import styles from '../../styles/MoviesList.module.css'
+import styles from "../../styles/MoviesList.module.css";
 
 const FEELINGS_ICONS = {
   like: "fa-solid fa-heart",
@@ -10,8 +10,12 @@ const FEELINGS_ICONS = {
   dislike: "fa-solid fa-thumbs-down",
 };
 
-export default function MoviesList({ myMovies, user }) {
-  const { movies } = FetchMovies();
+export default function MoviesList({ getAllMovies, myMovies, user }) {
+  let movies = [];
+
+  if (getAllMovies) {
+    movies = FetchMovies();
+  }
 
   return (
     <>
