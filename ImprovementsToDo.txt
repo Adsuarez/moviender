@@ -1,13 +1,13 @@
 Icons meening:
 ✅ -> the task is full
-🟢 -> the task is done but it will better
+🟢 -> the task is done but it will be better
 🟠 -> the task is in process
 ❌ -> the task is pending
 ❓ -> the task may be necesary or not
 
 Tasks:
 - ✅Link in Pending to login ("infoLogin")
-- ❌Create a search page
+- 🟠Create a search page
 - ❌Create a way to see more information for a movie when it's clicking on itselfe.
 - 🟢Optimize the "myMovie" info that is travel around Category-CalendarBUtton-Schedule-ScheduleAppointment my be with a temporal data in context
 - ❌Pagination in movies, we only have de first page in the fetchMOvies.
@@ -48,3 +48,4 @@ Tasks:
 - ❌Make a message with image and style to inform about the things in each page, for example "here will appear the movies..." not looks good.
 - ❌make an animation or way to minimize importance (may be with minus size) to the movies that select a feeling in home page.
 - ❌create placeholders to movies before their will be created or fetched
+- ❓Definir si al camiar de menú se debe conservar la última búsqueda, en vez de recargar las películas generales de la home.

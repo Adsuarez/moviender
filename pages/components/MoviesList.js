@@ -10,12 +10,8 @@ const FEELINGS_ICONS = {
   dislike: "fa-solid fa-thumbs-down",
 };
 
-export default function MoviesList({ getAllMovies, myMovies, user }) {
-  let movies = [];
-
-  if (getAllMovies) {
-    movies = FetchMovies();
-  }
+export default function MoviesList({ myMovies, user }) {
+  const { movies } = FetchMovies();
 
   return (
     <>

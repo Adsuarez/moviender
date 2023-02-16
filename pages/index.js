@@ -44,9 +44,9 @@ export default function Home() {
       </form>
       <div className={styles.movies}>
         {keyword === "" ? (
-          <MoviesList getAllMovies={false} myMovies={myMovies} user={user} />
+          <MoviesList myMovies={myMovies} user={user} />
         ) : (
-          foundMovies &&
+          foundMovies !== undefined &&
           foundMovies.length > 0 &&
           foundMovies.map((movie) => (
             <div key={movie.id}>
