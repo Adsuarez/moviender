@@ -1,27 +1,19 @@
-import { Suspense, useContext, useRef, useState } from "react";
+import { useContext, useState } from "react";
 import { UserContext } from "./context/UserContext";
 
 import styles from "../styles/MoviesList.module.css";
 
 import Head from "next/head";
 import MoviesList from "./components/MoviesList";
-//import SearchMoviesByKeyword from "./services/SearchMoviesByKeyword";
+
+import SearchForm from "./components/SearchForm";
+
 import { useMoviesByKeyword } from "./hooks/useMoviesByKeyword";
 
 export default function Home() {
   const { myMovies, user } = useContext(UserContext);
   const [keyword, setKeyword] = useState("");
   const foundMovies = useMoviesByKeyword(keyword);
-  const inputSearchRef = useRef("");
-
-  const handleSearch = (event) => {
-    event.preventDefault();
-    inputSearchRef.current.value = "";
-  };
-
-  const handleChange = (event) => {
-    setKeyword(event.target.value);
-  };
 
   return (
     <div className={styles.divMovies}>
@@ -32,27 +24,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>Welcome to Movienderingverse</h1>
-      <form onSubmit={handleSearch}>
-        <input
-          name="searchInput"
-          type="text"
-          placeholder="write a movie title"
-          onChange={handleChange}
-          ref={inputSearchRef}
-        ></input>
-        <button>Search</button>
-      </form>
+      <SearchForm setKeyword={setKeyword} />
       <div className={styles.movies}>
         {keyword === "" ? (
-          <MoviesList myMovies={myMovies} user={user} />
+          <MoviesList myMovies={myMovies} user={user} foundMovies={null} />
         ) : (
-          foundMovies !== undefined &&
-          foundMovies.length > 0 &&
-          foundMovies.map((movie) => (
-            <div key={movie.id}>
-              <p>{movie.title}</p>
-            </div>
-          ))
+          <MoviesList
+            myMovies={myMovies}
+            user={user}
+            foundMovies={foundMovies}
+          />
         )}
       </div>
     </div>

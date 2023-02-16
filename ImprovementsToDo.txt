@@ -48,4 +48,5 @@ Tasks:
 - ❌Make a message with image and style to inform about the things in each page, for example "here will appear the movies..." not looks good.
 - ❌make an animation or way to minimize importance (may be with minus size) to the movies that select a feeling in home page.
 - ❌create placeholders to movies before their will be created or fetched
-- ❓Definir si al camiar de menú se debe conservar la última búsqueda, en vez de recargar las películas generales de la home.
+- ❓Define if when change between pages the search input have to clean or persist
+- ❌Add regex control in search input, becouse when type a space the search is empty.

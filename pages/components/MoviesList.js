@@ -10,27 +10,31 @@ const FEELINGS_ICONS = {
   dislike: "fa-solid fa-thumbs-down",
 };
 
-export default function MoviesList({ myMovies, user }) {
+export default function MoviesList({ myMovies, user, foundMovies }) {
   const { movies } = FetchMovies();
+
+  const listMaker = (movie) => {
+    const feelingResponse = FeelingIdFinder(movie.id, myMovies);
+    return (
+      <div key={movie.id} className={styles.singleMovie}>
+        <p>{movie.title}</p>
+        <section className={styles.movieImgButtons}>
+          <PosterImage path={movie.poster_path} title={movie.title} />
+          {user === null || feelingResponse === undefined ? (
+            <ActionButtons id={movie.id} />
+          ) : (
+            <i className={FEELINGS_ICONS[feelingResponse]} />
+          )}
+        </section>
+      </div>
+    );
+  };
 
   return (
     <>
-      {movies.map((movie) => {
-        const feelingResponse = FeelingIdFinder(movie.id, myMovies);
-        return (
-          <div key={movie.id} className={styles.singleMovie}>
-            <p>{movie.title}</p>
-            <section className={styles.movieImgButtons}>
-              <PosterImage path={movie.poster_path} title={movie.title} />
-              {user === null || feelingResponse === undefined ? (
-                <ActionButtons id={movie.id} />
-              ) : (
-                <i className={FEELINGS_ICONS[feelingResponse]} />
-              )}
-            </section>
-          </div>
-        );
-      })}
+      {foundMovies
+        ? foundMovies.map((movie) => listMaker(movie))
+        : movies.map((movie) => listMaker(movie))}
     </>
   );
 }
