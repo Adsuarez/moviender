@@ -1,13 +1,22 @@
+//React
+import { useContext, useState } from "react";
+
+//context
+import { UserContext } from "../context/UserContext";
+
+//Styles
 import styles from "../../styles/MoviesList.module.css";
 
-import { useContext } from "react";
-import { UserContext } from "../context/UserContext";
+//components
 import PosterImage from "../components/PosterImage";
 import CalendarButton from "./CalendarButton";
-import SearchSingleMovie from "../services/SearchSingleMovie";
 
-export function Category({ feeling }) {
+//Hooks
+import useMovieById from "../hooks/useMovieById";
+
+export function Category({ feeling, keyword = "" }) {
   const { myMovies, user } = useContext(UserContext);
+  const { searchById } = useMovieById();
 
   const getIdsList = (feeling) => {
     if (myMovies.length === 0) return [];
@@ -29,13 +38,14 @@ export function Category({ feeling }) {
           {idsList.length > 0 ? (
             <section className={styles.movies}>
               {idsList.map((itemId) => {
-                const { title, poster_path } = SearchSingleMovie(itemId);
+                const { title, poster_path } = searchById(itemId);
+
                 return (
                   <div key={itemId} className={styles.singleMovie}>
                     <p>{title}</p>
                     <section className={styles.movieImgButtons}>
                       <PosterImage path={poster_path} title={title} />
-                      <CalendarButton myMovie={SearchSingleMovie(itemId)} />
+                      <CalendarButton myMovie={searchById(itemId)} />
                     </section>
                   </div>
                 );
