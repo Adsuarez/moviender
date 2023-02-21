@@ -16,7 +16,8 @@ import useMovieById from "../hooks/useMovieById";
 
 export function Category({ feeling, keyword = "" }) {
   const { myMovies, user } = useContext(UserContext);
-  const { addId } = useMovieById();
+  const [ID, setID] = useState(null);
+  const foundMovie = useMovieById(ID);
 
   const getIdsList = (feeling) => {
     if (myMovies.length === 0) return [];
@@ -39,9 +40,11 @@ export function Category({ feeling, keyword = "" }) {
           {idsList.length > 0 ? (
             <section className={styles.movies}>
               {idsList.map((itemId) => {
-                //const { title, poster_path } = searchById(itemId);
-                const title = "hola";
-                const poster_path = "www";
+                setID(itemId);
+                if (foundMovie !== null) {
+                  let { title, poster_path } = foundMovie;
+                }
+
                 return (
                   <div key={itemId} className={styles.singleMovie}>
                     <p>{title}</p>
