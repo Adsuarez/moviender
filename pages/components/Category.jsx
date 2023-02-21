@@ -16,16 +16,17 @@ import useMovieById from "../hooks/useMovieById";
 
 export function Category({ feeling, keyword = "" }) {
   const { myMovies, user } = useContext(UserContext);
-  const { searchById } = useMovieById();
+  const { addId } = useMovieById();
 
   const getIdsList = (feeling) => {
     if (myMovies.length === 0) return [];
 
+    /*parece innecesario este paso*/
     const [feelObject] = myMovies.filter(
       (item) => Object.keys(item)[0] === feeling
     );
 
-    if (feelObject) return Object.values(feelObject)[0];
+    if (feelObject) return Object.values(feelObject)[0]; //quizas solo con feeling puedo hacer esto
   };
 
   const idsList = getIdsList(feeling);
@@ -38,14 +39,15 @@ export function Category({ feeling, keyword = "" }) {
           {idsList.length > 0 ? (
             <section className={styles.movies}>
               {idsList.map((itemId) => {
-                const { title, poster_path } = searchById(itemId);
-
+                //const { title, poster_path } = searchById(itemId);
+                const title = "hola";
+                const poster_path = "www";
                 return (
                   <div key={itemId} className={styles.singleMovie}>
                     <p>{title}</p>
                     <section className={styles.movieImgButtons}>
                       <PosterImage path={poster_path} title={title} />
-                      <CalendarButton myMovie={searchById(itemId)} />
+                      {/* <CalendarButton myMovie={searchById(itemId)} /> */}
                     </section>
                   </div>
                 );

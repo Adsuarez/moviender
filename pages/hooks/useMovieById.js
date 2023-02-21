@@ -6,8 +6,30 @@ const LANGUAGE = "en-US";
 
 export default function useMovieById() {
   const [movie, setMovie] = useState({});
+  let addId = null;
 
-  const searchById = (id) => {
+  useEffect(() => {
+    addId = (itemId) => {
+      if (!itemId) return null;
+      return itemId;
+    };
+
+    if (addId !== null) {
+      fetch(`${API}${addId}?api_key=${API_KEY}&language=${LANGUAGE}`)
+        .then((response) => response.json())
+        .then((data) => setMovie(data))
+        .catch((error) => console.error(error));
+    }
+
+    return () => {
+      movie;
+    };
+  }, [movie]);
+
+  return { movie, addId };
+}
+
+/*const searchById = (id) => {
     fetch(`${API}${id}?api_key=${API_KEY}&language=${LANGUAGE}`)
       .then((response) => response.json())
       .then((data) => setMovie(data))
@@ -18,5 +40,4 @@ export default function useMovieById() {
 
   return {
     searchById,
-  };
-}
+  };*/
