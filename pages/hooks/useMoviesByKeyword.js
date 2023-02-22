@@ -9,7 +9,7 @@ export function useMoviesByKeyword(keyword) {
   const [foundMovies, setFoundMovies] = useState([]);
 
   useEffect(() => {
-    if(keyword === "") return setFoundMovies([]);
+    if (keyword === "") return setFoundMovies([]);
 
     fetch(
       `${API}${END_POINT}?api_key=${API_KEY}&language=${LANGUAGE}&query=${keyword}&page=1&include_adult=false`
