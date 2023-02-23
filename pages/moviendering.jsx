@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { UserContext } from "./context/UserContext";
 import PosterImage from "./components/PosterImage";
+import useRedirect from "./hooks/useRedirect";
 
 export default function MovienderingPage() {
+  useRedirect();
   const { schedule } = useContext(UserContext);
 
   return (

@@ -52,33 +52,18 @@ export default function Navigation() {
                 </Link>
               </li>
             ))
-          : links.map(({ route, access, icon }) =>
-              access === "all" ? (
-                <li key={route}>
-                <Link href={route}>
-                  <i className={icon} />
-                </Link>
-              </li>
-              ) : null
+          : links.map(
+              ({ route, access, icon }) =>
+                access === ACCESS_LEVEL[0] && (
+                  <li key={route}>
+                    <Link href={route}>
+                      <i className={icon} />
+                    </Link>
+                  </li>
+                )
             )}
       </ul>
       <LoginInfo />
     </div>
   );
 }
-
-/* 
-<ul>
-        {links.map(({ label, route, access }) =>
-          access === "all" ? (
-            <li key={route}>
-              <Link href={route}>{label}</Link>
-            </li>
-          ) : access === "logged" ? (
-            <li key={route}>
-              <Link href={route}>{label}</Link>
-            </li>
-          ) : null
-        )}
-      </ul>
-*/
