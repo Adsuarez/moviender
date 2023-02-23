@@ -29,15 +29,17 @@ export function Category({ feeling, keyword = "" }) {
             const movie = SearchSingleMovie(itemId);
             const { title, poster_path } = movie;
 
-            return (
-              <div key={itemId} className={styles.singleMovie}>
-                <p>{title}</p>
-                <section className={styles.movieImgButtons}>
-                  <PosterImage path={poster_path} title={title} />
-                  <CalendarButton myMovie={movie} />
-                </section>
-              </div>
-            );
+            if (title?.toLowerCase().includes(keyword)) {
+              return (
+                <div key={itemId} className={styles.singleMovie}>
+                  <p>{title}</p>
+                  <section className={styles.movieImgButtons}>
+                    <PosterImage path={poster_path} title={title} />
+                    <CalendarButton myMovie={movie} />
+                  </section>
+                </div>
+              );
+            }
           })}
         </section>
       ) : (

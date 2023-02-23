@@ -1,4 +1,4 @@
-export const FEELINGS = {
+const FEELINGS = {
   like: "like",
   desire: "desire",
   dislike: "dislike",

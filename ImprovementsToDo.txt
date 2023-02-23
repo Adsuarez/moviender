@@ -7,7 +7,9 @@ Icons meening:
 
 Tasks:
 - ✅Link in Pending to login ("infoLogin")
-- ✅Create a search page
+- ✅Create a search option in Home
+- ✅Create a search option in myMovies
+- ❓Create a search option in schedule
 - ❌Create a way to see more information for a movie when it's clicking on itselfe.
 - 🟢Optimize the "myMovie" info that is travel around Category-CalendarBUtton-Schedule-ScheduleAppointment my be with a temporal data in context
 - ❌Pagination in movies, we only have de first page in the fetchMOvies.
@@ -52,3 +54,7 @@ Tasks:
 - ❌Add regex control in search input, becouse when type a space the search is empty.
 - ❌Add option to clear or delete movies in Shedule.
 - ❌Add option to remove movie in myMovies
+- ❌Define if FeelingIdFInder may be omit improvement useIdLIst or a new hooks
+- ✅optimize or define a unique FEELING array and object.
+- ❌create a 404 Not found page
+- ❌Create not found option when not found a movie in search option

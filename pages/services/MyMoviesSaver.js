@@ -1,4 +1,4 @@
-export const FEELINGS = ["like", "desire", "dislike"];
+const FEELINGS = ["like", "desire", "dislike"];
 
 export default function MyMoviesSaver(id, feeling1, myMovies, setMyMovies) {
   const [feeling2, feeling3] = FEELINGS.filter((feel) => feel !== feeling1);
