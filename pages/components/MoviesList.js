@@ -22,6 +22,7 @@ export default function MoviesList({ myMovies, user, foundMovies }) {
 
   const listMaker = (movie) => {
     const feelingResponse = FeelingIdFinder(movie.id, myMovies);
+
     return (
       <div key={movie.id} className={styles.singleMovie}>
         <p>{movie.title}</p>

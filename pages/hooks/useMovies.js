@@ -8,7 +8,7 @@ const INITIAL_PAGE = 1;
 export default function useMovies() {
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(INITIAL_PAGE);
-
+  //setMovies((prev) => [...prev, ...data.results])
   useEffect(() => {
     fetch(`${API}?api_key=${API_KEY}&language=${LANGUAGE}&page=${page}`)
       .then((response) => response.json())
