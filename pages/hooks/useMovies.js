@@ -5,16 +5,23 @@ const API = "https://api.themoviedb.org/3/movie/popular";
 const LANGUAGE = "es-CO";
 const INITIAL_PAGE = 1;
 
-export default function useMovies() {
+export default function useMovies(foundMovies) {
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(INITIAL_PAGE);
-  //setMovies((prev) => [...prev, ...data.results])
+  //setMovies((prev) => [...prev, ...data.results])//Add new movies when is
+
   useEffect(() => {
-    fetch(`${API}?api_key=${API_KEY}&language=${LANGUAGE}&page=${page}`)
-      .then((response) => response.json())
-      .then((data) => setMovies((prev) => [...prev, ...data.results]))
-      .catch((error) => console.error(error));
-  }, [page]);
+    if (foundMovies === null) {
+      fetch(`${API}?api_key=${API_KEY}&language=${LANGUAGE}&page=${page}`)
+        .then((response) => response.json())
+        .then((data) =>
+          setMovies((prev) => {
+            if (prev.find(element => element === data.results[0]) === undefined) return [...prev, ...data.results];
+          })
+        )
+        .catch((error) => console.error(error));
+    }
+  }, [page, foundMovies]);
 
   const handleScroll = () => {
     const height = document.documentElement.scrollHeight;

@@ -20,7 +20,10 @@ import { useMoviesByKeyword } from "./hooks/useMoviesByKeyword";
 export default function Home() {
   const { myMovies, user } = useContext(UserContext);
   const [keyword, setKeyword] = useState("");
-  const foundMovies = useMoviesByKeyword(keyword);
+  //const foundMovies = useMoviesByKeyword(keyword);
+  //trying not re-render de app with foundMovies and useMOviesByKeyword.
+
+  //console.log("home render");
 
   return (
     <>
@@ -36,7 +39,7 @@ export default function Home() {
         <SearchForm setKeyword={setKeyword} />
         <div className={styles.movies}>
           {keyword === "" ? (
-            <MoviesList myMovies={myMovies} user={user} foundMovies={null} />
+            <MoviesList myMovies={myMovies} user={user} />
           ) : (
             <MoviesList
               myMovies={myMovies}

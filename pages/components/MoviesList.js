@@ -17,8 +17,10 @@ const FEELINGS_ICONS = {
   dislike: "fa-solid fa-thumbs-down",
 };
 
-export default function MoviesList({ myMovies, user, foundMovies }) {
-  const { movies } = useMovies();
+export default function MoviesList({ myMovies, user, foundMovies = null }) {
+  const { movies } = useMovies(foundMovies);
+
+  console.log("MoviesLIst render");
 
   const listMaker = (movie) => {
     const feelingResponse = FeelingIdFinder(movie.id, myMovies);
