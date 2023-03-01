@@ -1,37 +1,19 @@
-import { useState } from "react";
 import Schedule from "./Schedule";
 import styles from "../../styles/Buttons.module.css";
 import ModalCalendar from "./ModalCalendar";
+import useModal from "../hooks/useModal.js";
 
 export default function CalendarButton({ myMovie }) {
-  const [showModal, setShowModal] = useState(false);
-
-  const visibleCLick = () => {
-    return setShowModal(true);
-  };
-
-  const handleClose = () => {
-    setShowModal(false);
-  };
-
-  const handleSchedule = () => {
-    setShowModal(false);
-  };
-
-  if (showModal) {
-    document.body.classList.add("active-calendar");
-  } else {
-    document.body.classList.remove("active-calendar");
-  }
+  const { modal, openModal, closeModal } = useModal();
 
   return (
     <>
       <div className={styles.actionButtons}>
-        <button onClick={visibleCLick}>Show 📆</button>
+        <button onClick={openModal}>Show 📆</button>
       </div>
-      {showModal && (
-        <ModalCalendar onClose={handleClose}>
-          <Schedule myMovie={myMovie} onSchedule={handleSchedule} />
+      {modal && (
+        <ModalCalendar onClose={closeModal}>
+          <Schedule myMovie={myMovie} onSchedule={closeModal} />
         </ModalCalendar>
       )}
     </>

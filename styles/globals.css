@@ -43,6 +43,6 @@ p {
   backdrop-filter: blur(8px);
 }
 
-body.active-calendar {
+body.modal {
   overflow-y: hidden;
 }
