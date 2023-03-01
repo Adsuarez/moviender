@@ -18,9 +18,10 @@ const FEELINGS_ICONS = {
 };
 
 export default function MoviesList({ myMovies, user, foundMovies = null }) {
-  const { movies } = useMovies(foundMovies);
+  const { movies = [] } = useMovies(foundMovies);
 
-  console.log("MoviesLIst render");
+  console.log(movies.length)
+  //console.log("MoviesLIst render"); //MoviesList is render once when useMoves is not executed
 
   const listMaker = (movie) => {
     const feelingResponse = FeelingIdFinder(movie.id, myMovies);

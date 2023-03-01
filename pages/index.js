@@ -20,10 +20,9 @@ import { useMoviesByKeyword } from "./hooks/useMoviesByKeyword";
 export default function Home() {
   const { myMovies, user } = useContext(UserContext);
   const [keyword, setKeyword] = useState("");
-  //const foundMovies = useMoviesByKeyword(keyword);
-  //trying not re-render de app with foundMovies and useMOviesByKeyword.
+  const foundMovies = useMoviesByKeyword(keyword);
 
-  //console.log("home render");
+  //console.log("home render");//home is render once when useMOviesByKeyword is not executed
 
   return (
     <>
