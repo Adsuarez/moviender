@@ -1,27 +1,32 @@
-import { useState, useContext } from "react";
-import { UserContext } from "../context/UserContext";
+//react
+import { useContext } from "react";
+
+//styles
 import styles from "../../styles/Buttons.module.css";
-import ModalAuth from "./ModalAuth";
-import Login from "./Login";
+
+//context
+import { UserContext } from "../context/UserContext";
+
+//hooks
+import useModal from "../hooks/useModal.js";
+
+//components
+import Modal from "./Modal.js";
+import Login from "./Login.js";
+
+//services
 import MyMoviesSaver from "../services/MyMoviesSaver";
 
 export function ActionButtons({ id }) {
-  const [showModal, setShowModal] = useState(false);
+  const { modal, openModal, closeModal } = useModal();
   const { user, setMyMovies, myMovies } = useContext(UserContext);
 
   const handleClick = (event) => {
-    if (!user) return setShowModal(true);
+    if (!user) return openModal();
+    
     const feeling1 = event.target.name;
 
     return MyMoviesSaver(id, feeling1, myMovies, setMyMovies);
-  };
-
-  const handleClose = () => {
-    setShowModal(false);
-  };
-
-  const handleLogin = () => {
-    setShowModal(false);
   };
 
   return (
@@ -35,10 +40,10 @@ export function ActionButtons({ id }) {
       <button name={"dislike"} onClick={handleClick}>
         Dislike ❌
       </button>
-      {showModal && (
-        <ModalAuth onClose={handleClose}>
-          <Login onLogin={handleLogin} />
-        </ModalAuth>
+      {modal && (
+        <Modal onClose={closeModal}>
+          <Login onLogin={closeModal} />
+        </Modal>
       )}
     </section>
   );

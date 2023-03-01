@@ -1,7 +1,12 @@
-import Schedule from "./Schedule";
+//styles
 import styles from "../../styles/Buttons.module.css";
-import ModalCalendar from "./ModalCalendar";
+
+//hooks
 import useModal from "../hooks/useModal.js";
+
+//components
+import Schedule from "./Schedule";
+import Modal from "./Modal.js";
 
 export default function CalendarButton({ myMovie }) {
   const { modal, openModal, closeModal } = useModal();
@@ -12,9 +17,9 @@ export default function CalendarButton({ myMovie }) {
         <button onClick={openModal}>Show 📆</button>
       </div>
       {modal && (
-        <ModalCalendar onClose={closeModal}>
+        <Modal onClose={closeModal}>
           <Schedule myMovie={myMovie} onSchedule={closeModal} />
-        </ModalCalendar>
+        </Modal>
       )}
     </>
   );

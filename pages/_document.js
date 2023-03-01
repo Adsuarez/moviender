@@ -12,8 +12,7 @@ export default function Document() {
       </Head>
       <body>
         <Main />
-        <div id="modalAuth" />
-        <div id="modalCalendar" />
+        <div id="modal" />
         <NextScript />
       </body>
     </Html>
