@@ -1,26 +1,53 @@
-import { useState } from "react";
-import Calendar from "react-calendar";
-import "react-calendar/dist/Calendar.css";
-import ScheduleAppointment from "./ScheduleAppointment";
+//react
+import { useContext, useState } from "react";
+
+//styles
 import styles from "../../styles/Calendar.module.css";
 import ButtonStyles from "../../styles/Buttons.module.css";
 
+//context
+import { UserContext } from "../context/UserContext";
+
+//components
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+
 export default function Schedule({ myMovie, onSchedule }) {
-  const [value, onChange] = useState(new Date());
+  const [date, setDate] = useState(new Date());
+  const { schedule, setSchedule } = useContext(UserContext);
+
+  const scheduleClick = () => {
+    const id = myMovie.id;
+    const title = myMovie.title;
+
+    onSchedule && onSchedule();
+
+    if (schedule.length === 0)
+      return setSchedule([
+        {
+          date,
+          id,
+          title,
+        },
+      ]);
+
+    return setSchedule([
+      ...schedule,
+      {
+        date,
+        id,
+        title,
+      },
+    ]);
+  };
 
   return (
     <div>
-      <Calendar
-        onChange={onChange}
-        value={value}
-        className={styles.myCalendar}
-      />
+      <Calendar onChange={setDate} value={date} className={styles.myCalendar} />
       <div className={ButtonStyles.actionButtons}>
-        <ScheduleAppointment
-          date={value}
-          myMovie={myMovie}
-          onSchedule={onSchedule}
-        />
+        <button onClick={scheduleClick} className={styles.btn}>
+          Schedule the selected day 🍿
+        </button>
       </div>
     </div>
   );
