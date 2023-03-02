@@ -1,6 +1,9 @@
 //styles
 import styles from "../../styles/MoviesList.module.css";
 
+//public
+import {LIKE, DESIRE, DISLIKE} from '../../public/icons.js'
+
 //components
 import { ActionButtons } from "../components/ActionButtons";
 import PosterImage from "../components/PosterImage";
@@ -12,15 +15,14 @@ import FeelingIdFinder from "../services/FeelingIdFInder";
 import useMovies from "../hooks/useMovies";
 
 const FEELINGS_ICONS = {
-  like: "fa-solid fa-heart",
-  desire: "fa-solid fa-box-open",
-  dislike: "fa-solid fa-thumbs-down",
+  like: LIKE,
+  desire: DESIRE,
+  dislike: DISLIKE,
 };
 
 export default function MoviesList({ myMovies, user, foundMovies = null }) {
   const { movies = [] } = useMovies(foundMovies);
 
-  console.log(movies.length)
   //console.log("MoviesLIst render"); //MoviesList is render once when useMoves is not executed
 
   const listMaker = (movie) => {

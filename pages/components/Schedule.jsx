@@ -12,7 +12,7 @@ import { UserContext } from "../context/UserContext";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 
-export default function Schedule({ myMovie, onSchedule }) {
+export default function Schedule({ myMovie, closeModal }) {
   const [date, setDate] = useState(new Date());
   const { schedule, setSchedule } = useContext(UserContext);
 
@@ -20,7 +20,7 @@ export default function Schedule({ myMovie, onSchedule }) {
     const id = myMovie.id;
     const title = myMovie.title;
 
-    onSchedule && onSchedule();
+    closeModal && closeModal();
 
     if (schedule.length === 0)
       return setSchedule([

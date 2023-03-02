@@ -11,7 +11,7 @@ export default function LoginInfo() {
       <Image
         width={40}
         height={40}
-        alt="Profile"
+        alt="profile"
         src={!user ? "https://avatars.dicebear.com/api/avataaars/user1.svg" : "https://avatars.dicebear.com/api/avataaars/user0.svg"}
       />
     </Link>

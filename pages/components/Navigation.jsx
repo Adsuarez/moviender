@@ -5,6 +5,9 @@ import Link from "next/link";
 import styles from "../../styles/Navigation.module.css";
 import LoginInfo from "./LoginInfo";
 
+//public
+import { HOUSE, BOX, FILM, INFO } from "../../public/icons.js";
+
 const ACCESS_LEVEL = {
   0: "all",
   1: "logged",
@@ -16,25 +19,25 @@ const links = [
     label: "Home",
     route: "/",
     access: ACCESS_LEVEL[0],
-    icon: "fa-solid fa-house",
+    icon: HOUSE,
   },
   {
     label: "My movies",
     route: "mymovies",
     access: ACCESS_LEVEL[1],
-    icon: "fa-solid fa-box-open",
+    icon: BOX,
   },
   {
     label: "Moviendering",
     route: "/moviendering",
     access: ACCESS_LEVEL[1],
-    icon: "fa-solid fa-film",
+    icon: FILM,
   },
   {
     label: "About",
     route: "/about",
     access: ACCESS_LEVEL[0],
-    icon: "fa-solid fa-circle-info",
+    icon: INFO,
   },
 ];
 

@@ -18,7 +18,7 @@ export default function CalendarButton({ myMovie }) {
       </div>
       {modal && (
         <Modal onClose={closeModal}>
-          <Schedule myMovie={myMovie} onSchedule={closeModal} />
+          <Schedule myMovie={myMovie} closeModal={closeModal} />
         </Modal>
       )}
     </>
