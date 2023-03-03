@@ -12,18 +12,22 @@ import { UserContext } from "../context/UserContext";
 //components
 import Calendar from "react-calendar";
 
+//utils
+import { compareDates, decomposeDate } from "../utils/date.js";
+
 export default function Schedule({ myMovie, closeModal }) {
-  const today = new Date();
   const [date, setDate] = useState(new Date());
   const { schedule, setSchedule } = useContext(UserContext);
 
   const scheduleClick = () => {
     const id = myMovie.id;
     const title = myMovie.title;
+    const today = decomposeDate(new Date());
+    const dateDecomposed = decomposeDate(date);
 
     closeModal && closeModal();
 
-    if (date < today) return null;
+    if (!compareDates(today, dateDecomposed)) return null;
 
     if (schedule.length === 0)
       return setSchedule([
