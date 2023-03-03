@@ -35,7 +35,7 @@ Tasks:
 - ✅Create a dinamic head in each page
 - ❓ Create options to rewrite the schedule if is selected a new date for the same movie one more time
 - ✅Fix the style 100% or 100vh in .div class for all pages because background is damage
-- ❌Add a message or animation when user click Schedule button on calendar
+- ✅Add a message or animation when user click Schedule button on calendar
 - ✅Add a backdropfilter on nav-bar
 - 🟠Make reasponsive and mobileOnly the app
 - ✅Optimize the modal in calendar with a portal or let it be with UserContext
@@ -46,7 +46,7 @@ Tasks:
 - ❌Save the position of the page or scroll when the user is no log, because when is log the page send them to the first page
 - ❌Create option to change the feeling for a movie, maybe a little modal on the emoji
 - ❌make logout and setting avatar page a modal
-- ❌define if use one modal besides two, because are almost the same.
+- ✅define if use one modal besides two, because are almost the same.
 - ❌Make a message with image and style to inform about the things in each page, for example "here will appear the movies..." not looks good.
 - ❌make an animation or way to minimize importance (may be with minus size) to the movies that select a feeling in home page.
 - ❌create placeholders to movies before their will be created or fetched
@@ -58,3 +58,4 @@ Tasks:
 - ✅optimize or define a unique FEELING array and object.
 - ❌create a 404 Not found page
 - ❌Create not found option when not found a movie in search option
+- ✅don't let schedule movies in past days

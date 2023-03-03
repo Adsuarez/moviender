@@ -4,15 +4,16 @@ import { useContext, useState } from "react";
 //styles
 import styles from "../../styles/Calendar.module.css";
 import ButtonStyles from "../../styles/Buttons.module.css";
+import "react-calendar/dist/Calendar.css";
 
 //context
 import { UserContext } from "../context/UserContext";
 
 //components
 import Calendar from "react-calendar";
-import "react-calendar/dist/Calendar.css";
 
 export default function Schedule({ myMovie, closeModal }) {
+  const today = new Date();
   const [date, setDate] = useState(new Date());
   const { schedule, setSchedule } = useContext(UserContext);
 
@@ -21,6 +22,8 @@ export default function Schedule({ myMovie, closeModal }) {
     const title = myMovie.title;
 
     closeModal && closeModal();
+
+    if (date < today) return null;
 
     if (schedule.length === 0)
       return setSchedule([
