@@ -21,7 +21,7 @@ export default function Login({ onLogin }) {
 
     //Navigate to home
     router.push("/");
-    
+
     onLogin && onLogin();
 
     return setUser({
