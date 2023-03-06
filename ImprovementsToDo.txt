@@ -11,7 +11,7 @@ Tasks:
 - ✅Create a search option in myMovies
 - ❓Create a search option in schedule
 - ❌Create a way to see more information for a movie when it's clicking on itselfe.
-- 🟢Optimize the "myMovie" info that is travel around Category-CalendarBUtton-Schedule-ScheduleAppointment my be with a temporal data in context
+- ✅Optimize the "myMovie" info that is travel around Category-CalendarBUtton-Schedule-ScheduleAppointment my be with a temporal data in context
 - ✅Pagination in movies or infinity scroll, we only have de first page in the fetchMOvies.
 - ✅Fixed the head.
 - 🟢organize CSS in Home Page.
@@ -31,18 +31,18 @@ Tasks:
 - ✅Use Id in scheduled dates because is needed in id of the Key property in map function
 - 🟠Create profile info or setting and logout wehn clicking on avatar or user name
 - ✅Create protected routes when is not login
-- ❌Create an invitation to register when is reading the About page
+- ❌Create an invitation to register when is reading the About page or in home when scroll twice for example
 - ✅Create a dinamic head in each page
 - ❓ Create options to rewrite the schedule if is selected a new date for the same movie one more time
 - ✅Fix the style 100% or 100vh in .div class for all pages because background is damage
 - ✅Add a message or animation when user click Schedule button on calendar
 - ✅Add a backdropfilter on nav-bar
-- 🟠Make reasponsive and mobileOnly the app
+- 🟢Make reasponsive or mobileOnly the app
 - ✅Optimize the modal in calendar with a portal or let it be with UserContext
 - ❌Optimize the performance becouse there are re-renders in all pages
 - ✅Solve error about calendary duplicated when change the month
 - ✅Create a conditional render to show buttons acording to the feeling in home
-- ❌block the scroll when is in modalAuth to prevent download movies
+- ✅block the scroll when is in modalAuth to prevent download movies
 - ❌Save the position of the page or scroll when the user is no log, because when is log the page send them to the first page
 - ❌Create option to change the feeling for a movie, maybe a little modal on the emoji
 - ❌make logout and setting avatar page a modal

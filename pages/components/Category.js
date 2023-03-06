@@ -9,6 +9,7 @@ import { FILM } from "utils/icons.js";
 
 //Styles
 import styles from "../../styles/MoviesList.module.css";
+import stylesButton from "../../styles/Buttons.module.css";
 
 //components
 import PosterImage from "./PosterImage";
@@ -43,9 +44,16 @@ export function Category({ feeling, keyword = "" }) {
                   <section className={styles.movieImgButtons}>
                     <PosterImage path={poster_path} title={title} />
                     {isScheduled ? (
-                      <p>{<i className={FILM}/>} {date.toString().substring(0, 15)}</p>
+                      <p>
+                        {<i className={FILM} />}{" "}
+                        {date.toString().substring(0, 15)}
+                      </p>
                     ) : (
-                      <CalendarButton myMovie={movie} />
+                      <section className={stylesButton.actionButtons}>
+                        <button>Change feeling</button>
+                        <CalendarButton myMovie={movie} />
+                        <button>Delete movie</button>
+                      </section>
                     )}
                   </section>
                 </div>
