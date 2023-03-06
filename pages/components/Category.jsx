@@ -1,25 +1,25 @@
 //React
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 //context
-import { UserContext } from "../context/UserContext";
+import { UserContext } from "context/UserContext";
 
 //public
-import { FILM } from "../../public/icons.js";
+import { FILM } from "utils/icons.js";
 
 //Styles
 import styles from "../../styles/MoviesList.module.css";
 
 //components
-import PosterImage from "../components/PosterImage";
+import PosterImage from "./PosterImage";
 import CalendarButton from "./CalendarButton";
 
 //services
-import SearchSingleMovie from "../services/SearchSingleMovie";
-import ScheduleIdFinder from "../services/ScheduleIdFinder.js";
+import SearchSingleMovie from "services/SearchSingleMovie";
+import ScheduleIdFinder from "services/ScheduleIdFinder.js";
 
 //hooks
-import useIdsList from "../hooks/useIdsList";
+import useIdsList from "hooks/useIdsList";
 
 export function Category({ feeling, keyword = "" }) {
   const idsList = useIdsList(feeling);

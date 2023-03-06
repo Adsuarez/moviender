@@ -7,13 +7,13 @@ import ButtonStyles from "../../styles/Buttons.module.css";
 import "react-calendar/dist/Calendar.css";
 
 //context
-import { UserContext } from "../context/UserContext";
+import { UserContext } from "context/UserContext";
 
 //components
 import Calendar from "react-calendar";
 
 //utils
-import { compareDates, decomposeDate } from "../utils/date.js";
+import { compareDates, decomposeDate } from "utils/date.js";
 
 export default function Schedule({ myMovie, closeModal }) {
   const [date, setDate] = useState(new Date());

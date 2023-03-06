@@ -2,17 +2,17 @@
 import styles from "../../styles/MoviesList.module.css";
 
 //public
-import {LIKE, DESIRE, DISLIKE} from '../../public/icons.js'
+import { LIKE, DESIRE, DISLIKE } from "../utils/icons.js";
 
 //components
-import { ActionButtons } from "../components/ActionButtons";
-import PosterImage from "../components/PosterImage";
+import { ActionButtons } from "components/ActionButtons";
+import PosterImage from "components/PosterImage";
 
 //services
-import FeelingIdFinder from "../services/FeelingIdFInder";
+import FeelingIdFinder from "services/FeelingIdFInder";
 
 //hooks
-import useMovies from "../hooks/useMovies";
+import useMovies from "hooks/useMovies";
 
 const FEELINGS_ICONS = {
   like: LIKE,

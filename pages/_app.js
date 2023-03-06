@@ -1,6 +1,11 @@
+//styles
 import "../styles/globals.css";
-import Navigation from "./components/Navigation";
-import { UserContextProvider } from "./context/UserContext";
+
+//context
+import { UserContextProvider } from "context/UserContext";
+
+//components
+import Navigation from "components/Navigation";
 
 export default function App({ Component, pageProps }) {
   return (

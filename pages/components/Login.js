@@ -1,7 +1,14 @@
+//react
 import { useContext } from "react";
-import { UserContext } from "../context/UserContext";
-import styles from "../../styles/Buttons.module.css";
+
+//next
 import { useRouter } from "next/router";
+
+//styles
+import styles from "../../styles/Buttons.module.css";
+
+//context
+import { UserContext } from "context/UserContext";
 
 export default function Login({ onLogin }) {
   const { user, setUser } = useContext(UserContext);

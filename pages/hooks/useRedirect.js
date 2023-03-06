@@ -1,6 +1,11 @@
+//react
 import { useContext, useEffect } from "react";
-import { UserContext } from "../context/UserContext";
+
+//next
 import { useRouter } from "next/router";
+
+//context
+import { UserContext } from "../context/UserContext";
 
 export default function useRedirect() {
   const { user } = useContext(UserContext);

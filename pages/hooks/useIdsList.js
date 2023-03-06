@@ -1,5 +1,8 @@
+//react
 import { useContext } from "react";
-import { UserContext } from "../context/UserContext";
+
+//context
+import { UserContext } from "context/UserContext";
 
 export default function useIdsList(feeling) {
   const { myMovies } = useContext(UserContext);

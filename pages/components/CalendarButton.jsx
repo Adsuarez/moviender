@@ -2,7 +2,7 @@
 import styles from "../../styles/Buttons.module.css";
 
 //hooks
-import useModal from "../hooks/useModal.js";
+import useModal from "hooks/useModal.js";
 
 //components
 import Schedule from "./Schedule";

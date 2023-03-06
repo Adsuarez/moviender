@@ -8,14 +8,14 @@ import Head from "next/head";
 import styles from "../styles/MoviesList.module.css";
 
 //context
-import { UserContext } from "./context/UserContext";
+import { UserContext } from "context/UserContext";
 
 //components
-import MoviesList from "./components/MoviesList";
-import SearchForm from "./components/SearchForm";
+import MoviesList from "components/MoviesList";
+import SearchForm from "components/SearchForm";
 
 //hooks
-import { useMoviesByKeyword } from "./hooks/useMoviesByKeyword";
+import { useMoviesByKeyword } from "hooks/useMoviesByKeyword";
 
 export default function Home() {
   const { myMovies, user } = useContext(UserContext);

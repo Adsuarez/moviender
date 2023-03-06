@@ -1,12 +1,20 @@
+//react
 import { useContext } from "react";
-import { UserContext } from "../context/UserContext";
 
+//next
 import Link from "next/link";
+
+//styles
 import styles from "../../styles/Navigation.module.css";
+
+//context
+import { UserContext } from "context/UserContext";
+
+//components
 import LoginInfo from "./LoginInfo";
 
-//public
-import { HOUSE, BOX, FILM, INFO } from "../../public/icons.js";
+//utils
+import { HOUSE, BOX, FILM, INFO } from "utils/icons.js";
 
 const ACCESS_LEVEL = {
   0: "all",

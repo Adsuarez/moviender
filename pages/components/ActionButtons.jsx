@@ -5,17 +5,17 @@ import { useContext } from "react";
 import styles from "../../styles/Buttons.module.css";
 
 //context
-import { UserContext } from "../context/UserContext";
+import { UserContext } from "context/UserContext";
 
 //hooks
-import useModal from "../hooks/useModal.js";
+import useModal from "hooks/useModal.js";
 
 //components
 import Modal from "./Modal.js";
 import Login from "./Login.js";
 
 //services
-import MyMoviesSaver from "../services/MyMoviesSaver";
+import MyMoviesSaver from "services/MyMoviesSaver";
 
 export function ActionButtons({ id }) {
   const { modal, openModal, closeModal } = useModal();

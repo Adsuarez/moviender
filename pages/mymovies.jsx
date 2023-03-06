@@ -8,11 +8,11 @@ import Head from "next/head";
 import styles from "../styles/MoviesList.module.css";
 
 //components
-import { Category } from "./components/Category";
-import SearchForm from "./components/SearchForm";
+import { Category } from "components/Category";
+import SearchForm from "components/SearchForm";
 
 //hooks
-import useRedirect from "./hooks/useRedirect";
+import useRedirect from "hooks/useRedirect";
 
 export default function MyMoviesPage() {
   useRedirect();

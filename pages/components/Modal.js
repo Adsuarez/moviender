@@ -1,5 +1,7 @@
+//react
 import ReactDOM from "react-dom";
 
+//styles
 import styles from "../../styles/Modal.module.css";
 import buttonStyles from "../../styles/Buttons.module.css";
 

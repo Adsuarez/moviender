@@ -1,10 +1,15 @@
-import { useContext, useState } from "react";
-import { UserContext } from "../context/UserContext";
+//react
+import { useContext } from "react";
+
+//next
+import Link from "next/link";
 import Image from "next/image";
-import Link from 'next/link'
+
+//context
+import { UserContext } from "context/UserContext";
 
 export default function LoginInfo() {
-  const {user, setUser } = useContext(UserContext);
+  const { user } = useContext(UserContext);
 
   return (
     <Link href="/login">
@@ -12,7 +17,11 @@ export default function LoginInfo() {
         width={40}
         height={40}
         alt="profile"
-        src={!user ? "https://avatars.dicebear.com/api/avataaars/user1.svg" : "https://avatars.dicebear.com/api/avataaars/user0.svg"}
+        src={
+          !user
+            ? "https://avatars.dicebear.com/api/avataaars/user1.svg"
+            : "https://avatars.dicebear.com/api/avataaars/user0.svg"
+        }
       />
     </Link>
   );
