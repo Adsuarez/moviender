@@ -7,9 +7,13 @@ export default function useUpdateList() {
   const { myMovies, setMyMovies } = useContext(UserContext);
 
   //find if the id exist yet
-  const findRepeatedId = myMovies.map((feelingObject) => {
-    return Object.values(feelingObject)[0].findIndex((itemId) => itemId === id);
-  });
+  const findRepeatedId = (id) => {
+    return myMovies.map((feelingObject) => {
+      return Object.values(feelingObject)[0].findIndex(
+        (itemId) => itemId === id
+      );
+    });
+  };
 
   const CreateIdsFeelnigsArrays = (feeling1, feeling2, feeling3) => {
     //create empty arrays, one for each feelings
@@ -50,9 +54,10 @@ export default function useUpdateList() {
       ]);
 
     /*if is not empty the array myMovies, continue here*/
+    const findId = findRepeatedId(id);
 
     //if the id not exist evaluate this condition
-    if (findRepeatedId.every((item) => item === -1)) {
+    if (findId.every((item) => item === -1)) {
       const { idsOfFeeling1, idsOfFeeling2, idsOfFeeling3 } =
         CreateIdsFeelnigsArrays(feeling1, feeling2, feeling3);
 

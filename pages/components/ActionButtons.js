@@ -14,19 +14,20 @@ import useModal from "hooks/useModal.js";
 import Modal from "./Modal.js";
 import Login from "./Login.js";
 
-//services
-import MyMoviesSaver from "services/MyMoviesSaver";
+//hooks
+import useUpdateList from "hooks/useUpdateList";
 
 export function ActionButtons({ id }) {
   const { modal, openModal, closeModal } = useModal();
-  const { user, setMyMovies, myMovies } = useContext(UserContext);
+  const { user } = useContext(UserContext);
+  const { addMovie } = useUpdateList();
 
   const handleClick = (event) => {
     if (!user) return openModal();
-    
+
     const feeling1 = event.target.name;
 
-    return MyMoviesSaver(id, feeling1, myMovies, setMyMovies);
+    return addMovie(id, feeling1);
   };
 
   return (
