@@ -58,6 +58,7 @@ export default function useUpdateList() {
 
     //if the id not exist evaluate this condition
     if (findId.every((item) => item === -1)) {
+      //add ids in its corresponding feeling array
       const { idsOfFeeling1, idsOfFeeling2, idsOfFeeling3 } =
         CreateIdsFeelnigsArrays(feeling1, feeling2, feeling3);
 
@@ -75,5 +76,26 @@ export default function useUpdateList() {
     }
   };
 
-  return { myMovies, addMovie };
+  const removeMovie = (id, feeling1) => {
+    //asign the rest of the feelings
+    const [feeling2, feeling3] = FEELINGS.filter((feel) => feel !== feeling1);
+
+    //add ids in its corresponding feeling array
+    const { idsOfFeeling1, idsOfFeeling2, idsOfFeeling3 } =
+      CreateIdsFeelnigsArrays(feeling1, feeling2, feeling3);
+
+    return setMyMovies([
+      {
+        [feeling1]: idsOfFeeling1.filter((itemId) => itemId !== id),
+      },
+      {
+        [feeling2]: [...idsOfFeeling2],
+      },
+      {
+        [feeling3]: [...idsOfFeeling3],
+      },
+    ]);
+  };
+
+  return { myMovies, addMovie, removeMovie };
 }

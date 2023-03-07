@@ -21,10 +21,13 @@ import ScheduleIdFinder from "services/ScheduleIdFinder.js";
 
 //hooks
 import useIdsList from "hooks/useIdsList";
+import useUpdateList from "hooks/useUpdateList";
+import useSchedule from "hooks/useSchedule";
 
 export function Category({ feeling, keyword = "" }) {
   const idsList = useIdsList(feeling);
-  const { schedule } = useContext(UserContext);
+  //const { removeMovie } = useUpdateList();
+  const { getScheduleOfMovie } = useSchedule();
 
   return (
     <div key={feeling}>
@@ -36,7 +39,7 @@ export function Category({ feeling, keyword = "" }) {
             const { title, poster_path } = movie;
 
             if (title?.toLowerCase().includes(keyword)) {
-              const { isScheduled, date } = ScheduleIdFinder(itemId, schedule);
+              const { isScheduled, date } = getScheduleOfMovie(itemId);
 
               return (
                 <div key={itemId} className={styles.singleMovie}>
@@ -67,3 +70,5 @@ export function Category({ feeling, keyword = "" }) {
     </div>
   );
 }
+
+//onClick={removeMovie(itemId, feeling)}

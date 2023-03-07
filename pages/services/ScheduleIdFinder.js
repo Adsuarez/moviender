@@ -1,4 +1,9 @@
-export default function ScheduleIdFinder(id, schedule) {
+import { useContext } from "react";
+import { UserContext } from "context/UserContext";
+
+export default function ScheduleIdFinder(id) {
+  const { schedule } = useContext(UserContext);
+
   let date = "";
 
   const isScheduled = schedule.find((scheduleObject) => {
