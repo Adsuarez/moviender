@@ -11,8 +11,8 @@ import styles from "../styles/MoviesList.module.css";
 import { UserContext } from "context/UserContext";
 
 //components
-import MoviesList from "components/MoviesList";
-import SearchForm from "components/SearchForm";
+import MoviesList from "../components/MoviesList";
+import SearchForm from "../components/SearchForm";
 
 //hooks
 import useMoviesByKeyword from "hooks/useMoviesByKeyword";

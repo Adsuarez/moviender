@@ -1,5 +1,5 @@
 //styles
-import styles from "../../styles/Buttons.module.css";
+import styles from "styles/Buttons.module.css";
 
 //hooks
 import useModal from "hooks/useModal.js";

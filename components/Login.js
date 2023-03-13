@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { useRouter } from "next/router";
 
 //styles
-import styles from "../../styles/Buttons.module.css";
+import styles from "styles/Buttons.module.css";
 
 //context
 import { UserContext } from "context/UserContext";

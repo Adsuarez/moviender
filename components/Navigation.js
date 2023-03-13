@@ -5,7 +5,7 @@ import { useContext } from "react";
 import Link from "next/link";
 
 //styles
-import styles from "../../styles/Navigation.module.css";
+import styles from "styles/Navigation.module.css";
 
 //context
 import { UserContext } from "context/UserContext";

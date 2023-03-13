@@ -2,7 +2,7 @@
 import Image from "next/image";
 
 //styles
-import styles from "../../styles/Poster.module.css";
+import styles from "styles/Poster.module.css";
 
 const IMG_SRC = "https://image.tmdb.org/t/p/original";
 

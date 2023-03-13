@@ -2,7 +2,7 @@
 import { useContext } from "react";
 
 //styles
-import styles from "../../styles/Buttons.module.css";
+import styles from "styles/Buttons.module.css";
 
 //context
 import { UserContext } from "context/UserContext";

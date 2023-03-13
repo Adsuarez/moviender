@@ -2,8 +2,8 @@
 import { useContext, useState } from "react";
 
 //styles
-import styles from "../../styles/Calendar.module.css";
-import ButtonStyles from "../../styles/Buttons.module.css";
+import styles from "styles/Calendar.module.css";
+import ButtonStyles from "styles/Buttons.module.css";
 import "react-calendar/dist/Calendar.css";
 
 //context

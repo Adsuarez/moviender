@@ -1,18 +1,18 @@
 //styles
-import styles from "../../styles/MoviesList.module.css";
-
-//public
-import { LIKE, DESIRE, DISLIKE } from "../utils/icons.js";
+import styles from "styles/MoviesList.module.css";
 
 //components
-import ActionButtons from "components/ActionButtons";
-import PosterImage from "components/PosterImage";
+import ActionButtons from "./ActionButtons";
+import PosterImage from "./PosterImage";
 
 //services
 import FeelingIdFinder from "services/FeelingIdFInder";
 
 //hooks
 import useMovies from "hooks/useMovies";
+
+//utils
+import { LIKE, DESIRE, DISLIKE } from "utils/icons.js";
 
 const FEELINGS_ICONS = {
   like: LIKE,

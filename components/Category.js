@@ -2,8 +2,8 @@
 import { FILM } from "utils/icons.js";
 
 //Styles
-import styles from "../../styles/MoviesList.module.css";
-import stylesButton from "../../styles/Buttons.module.css";
+import styles from "styles/MoviesList.module.css";
+import stylesButton from "styles/Buttons.module.css";
 
 //components
 import PosterImage from "./PosterImage";

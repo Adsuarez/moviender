@@ -5,7 +5,7 @@ import "../styles/globals.css";
 import UserContextProvider from "context/UserContext";
 
 //components
-import Navigation from "components/Navigation";
+import Navigation from "../components/Navigation";
 
 export default function App({ Component, pageProps }) {
   return (
