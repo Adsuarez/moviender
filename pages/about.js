@@ -18,8 +18,8 @@ export default function AboutPage() {
           friends? We too had it some times. <strong>Moviender</strong> is an
           easy way to match with your friends and select the movies you like.
           Try choosing with Desire button and then schedule the movies, if your
-          friends want to be the same genere or the same movie,
-          <strong> Moviender </strong> match you bouth.
+          friends want to see the same genere or the same movie,{" "}
+          <strong>Moviender</strong> match you bouth.
         </p>
       </div>
     </>
