@@ -22,8 +22,6 @@ export default function Home() {
   const [keyword, setKeyword] = useState("");
   const foundMovies = useMoviesByKeyword(keyword);
 
-  //console.log("home render");//home is render once when useMOviesByKeyword is not executed
-
   return (
     <>
       <Head>

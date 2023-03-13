@@ -56,19 +56,21 @@ export default function Navigation() {
     <div className={styles.navigation}>
       <ul>
         {user
-          ? links.map(({ route, icon }) => (
+          ? links.map(({ route, icon, label }) => (
               <li key={route}>
                 <Link href={route}>
                   <i className={icon} />
+                  <p>{label}</p>
                 </Link>
               </li>
             ))
           : links.map(
-              ({ route, access, icon }) =>
+              ({ route, access, icon, label }) =>
                 access === ACCESS_LEVEL[0] && (
                   <li key={route}>
                     <Link href={route}>
                       <i className={icon} />
+                      <p>{label}</p>
                     </Link>
                   </li>
                 )

@@ -2,7 +2,7 @@
 import { useRef } from "react";
 
 //styles
-import FormStyles from "../../styles/Form.module.css";
+import styles from "../../styles/Form.module.css";
 
 export default function SearchForm({ setKeyword }) {
   const inputSearchRef = useRef("");
@@ -17,7 +17,7 @@ export default function SearchForm({ setKeyword }) {
   };
 
   return (
-    <form onSubmit={handleSearch} className={FormStyles.form}>
+    <form onSubmit={handleSearch} className={styles.form}>
       <input
         name="searchInput"
         type="text"

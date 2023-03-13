@@ -17,13 +17,13 @@ export default function Login({ onLogin }) {
   const login = (event) => {
     event.preventDefault();
 
-    //conect to BD to get the user
+    /*Here will be conection to BD to get the real user*/
 
-    //Navigate to home
-    router.push("/");
+    router.push("/"); //Navigate to home
 
     onLogin && onLogin();
 
+    //Test user
     return setUser({
       id: "1001000",
       name: "Miler",

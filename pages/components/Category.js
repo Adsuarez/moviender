@@ -1,9 +1,3 @@
-//React
-import { useContext } from "react";
-
-//context
-import { UserContext } from "context/UserContext";
-
 //public
 import { FILM } from "utils/icons.js";
 
@@ -17,16 +11,13 @@ import CalendarButton from "./CalendarButton";
 
 //services
 import SearchSingleMovie from "services/SearchSingleMovie";
-import ScheduleIdFinder from "services/ScheduleIdFinder.js";
 
 //hooks
 import useIdsList from "hooks/useIdsList";
-import useUpdateList from "hooks/useUpdateList";
 import useSchedule from "hooks/useSchedule";
 
 export function Category({ feeling, keyword = "" }) {
   const idsList = useIdsList(feeling);
-  //const { removeMovie } = useUpdateList();
   const { getScheduleOfMovie } = useSchedule();
 
   return (
@@ -53,9 +44,7 @@ export function Category({ feeling, keyword = "" }) {
                       </p>
                     ) : (
                       <section className={stylesButton.actionButtons}>
-                        <button>Change feeling</button>
                         <CalendarButton myMovie={movie} />
-                        <button>Delete movie</button>
                       </section>
                     )}
                   </section>
@@ -70,5 +59,3 @@ export function Category({ feeling, keyword = "" }) {
     </div>
   );
 }
-
-//onClick={removeMovie(itemId, feeling)}
