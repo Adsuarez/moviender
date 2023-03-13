@@ -16,7 +16,7 @@ import SearchSingleMovie from "services/SearchSingleMovie";
 import useIdsList from "hooks/useIdsList";
 import useSchedule from "hooks/useSchedule";
 
-export function Category({ feeling, keyword = "" }) {
+export default function Category({ feeling, keyword = "" }) {
   const idsList = useIdsList(feeling);
   const { getScheduleOfMovie } = useSchedule();
 

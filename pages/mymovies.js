@@ -8,7 +8,7 @@ import Head from "next/head";
 import styles from "../styles/MoviesList.module.css";
 
 //components
-import { Category } from "components/Category";
+import Category from "components/Category";
 import SearchForm from "components/SearchForm";
 
 //hooks

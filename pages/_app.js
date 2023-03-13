@@ -2,7 +2,7 @@
 import "../styles/globals.css";
 
 //context
-import { UserContextProvider } from "context/UserContext";
+import UserContextProvider from "context/UserContext";
 
 //components
 import Navigation from "components/Navigation";

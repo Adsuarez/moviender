@@ -6,7 +6,7 @@ const API = "https://api.themoviedb.org/3";
 const END_POINT = "/search/movie";
 const LANGUAGE = "es-US";
 
-export function useMoviesByKeyword(keyword) {
+export default function useMoviesByKeyword(keyword) {
   const [foundMovies, setFoundMovies] = useState([]);
 
   useEffect(() => {

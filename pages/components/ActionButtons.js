@@ -11,13 +11,13 @@ import { UserContext } from "context/UserContext";
 import useModal from "hooks/useModal.js";
 
 //components
-import Modal from "./Modal.js";
+import ModalPortal from "./Modal.js";
 import Login from "./Login.js";
 
 //hooks
 import useUpdateList from "hooks/useUpdateList";
 
-export function ActionButtons({ id }) {
+export default function ActionButtons({ id }) {
   const { modal, openModal, closeModal } = useModal();
   const { user } = useContext(UserContext);
   const { addMovie } = useUpdateList();
@@ -42,9 +42,9 @@ export function ActionButtons({ id }) {
         Dislike ❌
       </button>
       {modal && (
-        <Modal onClose={closeModal}>
+        <ModalPortal onClose={closeModal}>
           <Login onLogin={closeModal} />
-        </Modal>
+        </ModalPortal>
       )}
     </section>
   );

@@ -5,7 +5,7 @@ import styles from "../../styles/MoviesList.module.css";
 import { LIKE, DESIRE, DISLIKE } from "../utils/icons.js";
 
 //components
-import { ActionButtons } from "components/ActionButtons";
+import ActionButtons from "components/ActionButtons";
 import PosterImage from "components/PosterImage";
 
 //services

@@ -1,10 +1,10 @@
-export const decomposeDate = (dateToDescompose) => {
+export default function decomposeDate(dateToDescompose) {
   const year = Number(dateToDescompose.getUTCFullYear());
   const month = Number(dateToDescompose.getMonth()) + 1; //getMonth() is zero-based
   const day = Number(dateToDescompose.getDate());
 
   return [year, month, day];
-};
+}
 
 export const compareDates = (today, dateDecomposed) => {
   const greaterYear = dateDecomposed[0] > today[0];

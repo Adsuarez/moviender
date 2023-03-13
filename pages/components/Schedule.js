@@ -13,7 +13,7 @@ import { UserContext } from "context/UserContext";
 import Calendar from "react-calendar";
 
 //utils
-import { compareDates, decomposeDate } from "utils/date.js";
+import decomposeDate, { compareDates } from "utils/date.js";
 
 export default function Schedule({ myMovie, closeModal }) {
   const [date, setDate] = useState(new Date());

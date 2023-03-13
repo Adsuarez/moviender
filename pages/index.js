@@ -15,7 +15,7 @@ import MoviesList from "components/MoviesList";
 import SearchForm from "components/SearchForm";
 
 //hooks
-import { useMoviesByKeyword } from "hooks/useMoviesByKeyword";
+import useMoviesByKeyword from "hooks/useMoviesByKeyword";
 
 export default function Home() {
   const { myMovies, user } = useContext(UserContext);

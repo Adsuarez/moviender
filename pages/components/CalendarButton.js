@@ -6,7 +6,7 @@ import useModal from "hooks/useModal.js";
 
 //components
 import Schedule from "./Schedule";
-import Modal from "./Modal.js";
+import ModalPortal from "./Modal.js";
 
 export default function CalendarButton({ myMovie }) {
   const { modal, openModal, closeModal } = useModal();
@@ -17,9 +17,9 @@ export default function CalendarButton({ myMovie }) {
         <button onClick={openModal}>Show 📆</button>
       </div>
       {modal && (
-        <Modal onClose={closeModal}>
+        <ModalPortal onClose={closeModal}>
           <Schedule myMovie={myMovie} closeModal={closeModal} />
-        </Modal>
+        </ModalPortal>
       )}
     </>
   );
