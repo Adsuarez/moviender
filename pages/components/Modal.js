@@ -18,7 +18,7 @@ function Modal({ children, onClose }) {
   );
 }
 
-export default function ModalPortal({ children, onClose }) {
+export default function ModalPortal({ children = null, onClose = null }) {
   return ReactDOM.createPortal(
     <Modal onClose={onClose}>{children}</Modal>,
     document.getElementById("modal")
