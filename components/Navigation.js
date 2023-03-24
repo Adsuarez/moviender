@@ -14,7 +14,7 @@ import { UserContext } from "context/UserContext";
 import LoginInfo from "./LoginInfo";
 
 //utils
-import { HOUSE, BOX, FILM, INFO } from "utils/icons.js";
+import { HOUSE, BOX, FILM, INFO, PEOPLE } from "utils/icons.js";
 
 const ACCESS_LEVEL = {
   0: "all",
@@ -31,9 +31,15 @@ const links = [
   },
   {
     label: "My movies",
-    route: "mymovies",
+    route: "/mymovies",
     access: ACCESS_LEVEL[1],
     icon: BOX,
+  },
+  {
+    label: "People",
+    route: "/people",
+    acces: ACCESS_LEVEL[1],
+    icon: PEOPLE,
   },
   {
     label: "Moviendering",
