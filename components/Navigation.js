@@ -71,8 +71,8 @@ export default function Navigation() {
               </li>
             ))
           : links.map(
-              ({ route, access, icon, label }) =>
-                access === ACCESS_LEVEL[0] && (
+              ({ route, icon, label }) =>
+                (label === "Home" || label === "About") && (
                   <li key={route}>
                     <Link href={route}>
                       <i className={icon} />
