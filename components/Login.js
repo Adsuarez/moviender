@@ -1,5 +1,5 @@
 //react
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 //next
 import { useRouter } from "next/router";
@@ -9,6 +9,7 @@ import styles from "styles/Buttons.module.css";
 
 //context
 import { UserContext } from "context/UserContext";
+import { getUser } from "services/users.js";
 
 export default function Login({ onLogin }) {
   const { user, setUser } = useContext(UserContext);
@@ -17,19 +18,14 @@ export default function Login({ onLogin }) {
   const login = (event) => {
     event.preventDefault();
 
-    /*Here will be conection to BD to get the real user*/
-
-    router.push("/"); //Navigate to home
-
-    onLogin && onLogin();
-
-    //Test user
-    return setUser({
-      id: "1001000",
-      name: "Miler",
-      email: "usuario@usuario.com",
-      instagram: "https://www.instagram.com/usuario_usuario/",
+    getUser().then((userInProcess) => {
+      setUser(userInProcess);
+      userInProcess !== null && router.push("/"); //Navigate to home
     });
+
+    onLogin && onLogin(); //to close Modal
+
+    return user;
   };
 
   const logout = (event) => {
@@ -39,6 +35,8 @@ export default function Login({ onLogin }) {
 
   return (
     <div className={styles.div}>
+      <p>{user?.userName}</p>
+      <p>{user?.email}</p>
       <form className={styles.actionButtons}>
         {!user ? (
           <button onClick={login}>Login</button>
