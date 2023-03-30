@@ -12,7 +12,7 @@ import useModal from "hooks/useModal.js";
 
 //components
 import ModalPortal from "./Modal.js";
-import Login from "./Login.js";
+import Auth from "./Auth.js";
 
 //hooks
 import useUpdateList from "hooks/useUpdateList";
@@ -43,7 +43,7 @@ export default function ActionButtons({ id }) {
       </button>
       {modal && (
         <ModalPortal onClose={closeModal}>
-          <Login onLogin={closeModal} />
+          <Auth onLogin={closeModal} />
         </ModalPortal>
       )}
     </section>
