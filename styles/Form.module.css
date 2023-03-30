@@ -1,3 +1,14 @@
+.div{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.div h2{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
 .form {
   display: flex;
   justify-content: center;
@@ -22,7 +33,7 @@
 .form button {
   color: rgb(208, 203, 235);
   background-color: transparent;
-  border-radius: 50%;
+  border-radius: 1em;
   padding: 10px;
 }
 
