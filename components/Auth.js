@@ -18,18 +18,18 @@ export default function Auth({ onLogin }) {
   const [password, setPassword] = useState(null);
   const router = useRouter();
 
-  const handleEmail = (event) => {
-    setEmail(event.target.value);
+  const handleEmail = ({ target }) => {
+    setEmail(target.value);
   };
 
-  const handlePassword = (event) => {
-    setPassword(event.target.value);
+  const handlePassword = ({ target }) => {
+    setPassword(target.value);
   };
 
   const signin = (event) => {
     event.preventDefault();
 
-    createUser({ email }).then((response) => {
+    createUser({ email, password }).then((response) => {
       if (response.message) return console.log(response.message);
       return console.log(response);
     });
