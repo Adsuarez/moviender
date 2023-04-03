@@ -30,7 +30,7 @@ export default function Auth({ onLogin }) {
     event.preventDefault();
 
     createUser({ email, password }).then((response) => {
-      if (response.message) return console.log(response.message);
+      if (!response) return console.log(response?.message);
       return console.log(response);
     });
   };

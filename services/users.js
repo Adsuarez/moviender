@@ -30,12 +30,12 @@ export async function createUser(userData) {
   return fetch(baseTestUrl, {
     method: "POST",
     mode: "cors",
-    body: JSON.stringify(userData),
     headers: { "Content-type": "application/json; charset=UTF-8" },
+    body: JSON.stringify(userData),
   })
     .then((response) => response.json())
     .then((json) => {
-      if (json.message) return json.message;
+      if (json.message) return null;
       return json;
     })
     .catch((error) => {
