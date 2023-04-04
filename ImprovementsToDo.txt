@@ -23,7 +23,7 @@ Tasks:
 - ✅separate components and hooks (create customHooks if need it).
 - ❌create a big calendar o some way to see schedule in Movindering page.
 - 🟠Create the real LogIn
-- ❌Create the real SignIn
+- 🟢Create the real SignIn
 - ❌Create language options
 - ✅redirect before login
 - ❓Calendar options to schedule only in desire and like movies.
