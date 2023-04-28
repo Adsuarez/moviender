@@ -1,16 +1,17 @@
-.div{
+.div {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.div h2{
+.div h2 {
   margin-bottom: 10px;
   margin-top: 10px;
 }
 
 .form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: 5px;
   margin-left: auto;
