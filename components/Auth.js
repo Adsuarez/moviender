@@ -64,6 +64,10 @@ export default function Auth({ onLogin }) {
             <form className={styles.form}>
               <input type="text" placeholder="Write your email" />
               <input placeholder="Write your password" type="password" />
+              <p>
+                🙁 We are under construction 👨‍💻, please just click on the Log in
+                button 👇
+              </p>
               <button onClick={login}>Log in</button>
             </form>
           </div>
