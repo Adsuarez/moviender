@@ -1,0 +1,44 @@
+.div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.div h2 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.form input,
+.form button {
+  border-style: none;
+}
+
+.form input {
+  border-radius: 1em;
+  background: rgb(208, 203, 235);
+  text-align: center;
+}
+
+.form button {
+  color: rgb(208, 203, 235);
+  background-color: transparent;
+  border-radius: 1em;
+  padding: 10px;
+}
+
+.form button:hover {
+  background: rgb(83, 228, 114);
+  color: rgb(5, 5, 48);
+  cursor: pointer;
+}
