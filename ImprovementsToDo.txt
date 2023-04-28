@@ -59,3 +59,5 @@ Tasks:
 - ❌create a 404 Not found page
 - ❌Create not found option when not found a movie in search option
 - ✅don't let schedule movies in past days
+- ❌ Solve repeated style in search and form.
+- ❌ Delete temporary message for Login button
