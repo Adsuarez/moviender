@@ -9,7 +9,15 @@ __This project is still under building__ 👨‍💻
 Have you had problems when you want to watch a movie with your friends? We too had it some times. Moviender is an easy way to match with your friends and select the movies you like. Try choosing with Desire button and then schedule the movies, if your friends want to see the same genere or the same movie, Moviender match you bouth.
 
 ## How to use the web application?
-If you want to be a user, visit the page  https://moviender.vercel.app/ try to search any movie and assign a feeling with the buttons, go to My movies page, there you will find the movies you have reacted to. With the calendar button, you can schedule when you want to see the movie, that's all. You won't have to use notes, reminders or chat messages to remember which movie you want to see, Moviender remembers it for you.
+If you want to be a user, visit the page https://moviender.vercel.app/ try to search any movie and assign a feeling with the buttons, go to My movies page, there you will find the movies you have reacted to. With the calendar button, you can schedule when you want to see the movie, that's all. You won't have to use notes, reminders or chat messages to remember which movie you want to see, Moviender remembers it for you.
+
+### step list
+| Step 	| Description 	| Result 	|
+|:---:	|---	|:---:	|
+| 1 	| Visit the page  https://moviender.vercel.app/ 	| ![image](https://github.com/Adsuarez/moviender/assets/26845524/db7e0d29-2bde-4769-92eb-5f4ff66d7a94) 	|
+| 2 	| - Option A: Click on Like, Desire  or Dislike buttons,  - Option B: Click on avatar image 	| - Option A: ![image](https://github.com/Adsuarez/moviender/assets/26845524/974293e8-6e29-4c13-a7fc-224d27c23119) 
+
+- Option B: ![image](https://github.com/Adsuarez/moviender/assets/26845524/b321e5e9-ab12-43f0-bade-3ae46fb7570d)|
 
 ## How to program this web application?
 
