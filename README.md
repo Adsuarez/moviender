@@ -1,23 +1,61 @@
-# Moviender = Movies + Tinder
+# Moviender = 🎥 Movies + 🔥 Tinder
 ---
 __This project is still under building__ 👨‍💻
 
 - __Visit the demo here:__ https://moviender.vercel.app/
-- __More about me:__ https://www.linkedin.com/in/andres-suarez-06a3571b9/
+- __More about me:__ https://www.linkedin.com/in/andres-david-suarez-q-06a3571b9/
 
 ## What is Moviender?
 Have you had problems when you want to watch a movie with your friends? We too had it some times. Moviender is an easy way to match with your friends and select the movies you like. Try choosing with Desire button and then schedule the movies, if your friends want to see the same genere or the same movie, Moviender match you bouth.
 
 ## How to use the web application?
-If you want to be a user, visit the page https://moviender.vercel.app/ try to search any movie and assign a feeling with the buttons, go to My movies page, there you will find the movies you have reacted to. With the calendar button, you can schedule when you want to see the movie, that's all. You won't have to use notes, reminders or chat messages to remember which movie you want to see, Moviender remembers it for you.
+### Step 1
+Visit the page  https://moviender.vercel.app/ 
 
-### step list
-| Step 	| Description 	| Result 	|
-|:---:	|---	|:---:	|
-| 1 	| Visit the page  https://moviender.vercel.app/ 	| ![image](https://github.com/Adsuarez/moviender/assets/26845524/db7e0d29-2bde-4769-92eb-5f4ff66d7a94) 	|
-| 2 	| - Option A: Click on Like, Desire  or Dislike buttons,  - Option B: Click on avatar image 	| - Option A: ![image](https://github.com/Adsuarez/moviender/assets/26845524/974293e8-6e29-4c13-a7fc-224d27c23119) 
+![image](https://github.com/Adsuarez/moviender/assets/26845524/db7e0d29-2bde-4769-92eb-5f4ff66d7a94)
 
-- Option B: ![image](https://github.com/Adsuarez/moviender/assets/26845524/b321e5e9-ab12-43f0-bade-3ae46fb7570d)|
+### Step 2
+- Option A: Click on Like, Desire or Dislike buttons,
+
+![image](https://github.com/Adsuarez/moviender/assets/26845524/b321e5e9-ab12-43f0-bade-3ae46fb7570d)
+
+- Option B: Click on avatar image.
+
+![image](https://github.com/Adsuarez/moviender/assets/26845524/974293e8-6e29-4c13-a7fc-224d27c23119)
+
+### Step 3
+Explore the recent movies list.
+
+![image](https://github.com/Adsuarez/moviender/assets/26845524/24c2441f-cb7f-49a3-9bf9-6a99b6bba805)
+
+Or find a specific movie.
+
+![image](https://github.com/Adsuarez/moviender/assets/26845524/7d54c96d-ee12-4d98-83db-47cc5db80f03)
+
+### Step 4
+Press a button according to your feelings about that movie.
+
+![image](https://github.com/Adsuarez/moviender/assets/26845524/30b0c6b9-3678-495e-bbd9-c028f6af0014)
+
+### Step 5
+Click on the My movies option from the top menu, to see the movies with which you have reacted.
+
+![image](https://github.com/Adsuarez/moviender/assets/26845524/56042d0a-e0c9-4e1b-9c15-214698547929)
+
+### Step 6
+Select the Show button of the movie you want to schedule.
+
+![image](https://github.com/Adsuarez/moviender/assets/26845524/fea60b20-bde0-4bd2-895e-2415028a5cb1)
+
+### Step 7
+Schedule the date you want to see the movie.
+
+![image](https://github.com/Adsuarez/moviender/assets/26845524/ec37f0d7-5117-4b41-8323-175b54d25135)
+
+### Step 8
+Check the list of movies you want to see with your friends and enjoy them!
+
+![image](https://github.com/Adsuarez/moviender/assets/26845524/26d94a63-0e7c-4ea0-a99a-c1f1ecdf60aa)
 
 ## How to program this web application?
 
